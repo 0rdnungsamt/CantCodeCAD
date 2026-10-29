@@ -1,0 +1,146 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Bolzen M8x22",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Kopf",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "c",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k",
+     "type": "circle",
+     "c": "c",
+     "r": 6.5
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Kopf",
+   "sketch": "s1",
+   "distance": 5,
+   "direction": "normal",
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Schaft",
+   "plane": {
+    "key": "FACE",
+    "label": "Fläche des Körpers",
+    "o": [
+     0,
+     0,
+     5
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "c",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k",
+     "type": "circle",
+     "c": "c",
+     "r": 4
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e2",
+   "type": "extrude",
+   "name": "Schaft",
+   "sketch": "s2",
+   "distance": 22,
+   "direction": "normal",
+   "op": "join",
+   "profiles": null
+  },
+  {
+   "id": "c1",
+   "type": "chamfer",
+   "name": "Fase1",
+   "distance": 0.8,
+   "all": false,
+   "edges": [
+    {
+     "t": "CIRCLE",
+     "p": [
+      4,
+      0,
+      27
+     ]
+    }
+   ]
+  }
+ ],
+ "bodies": {
+  "e1": {
+   "name": "Bolzen",
+   "hidden": false,
+   "material": "stainless",
+   "color": ""
+  }
+ },
+ "components": [],
+ "inserts": [],
+ "file": "Beispiele/Bolzen M8x22.cantcodecad"
+}

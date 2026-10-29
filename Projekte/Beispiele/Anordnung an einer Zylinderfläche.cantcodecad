@@ -1,0 +1,119 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Anordnung an einer Zylinderfläche",
+ "units": "mm",
+ "features": [
+  {
+   "id": "c1",
+   "type": "primitive",
+   "name": "Zylinder",
+   "kind": "cylinder",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 0,
+   "cy": 0,
+   "w": 20,
+   "l": 20,
+   "h": 30,
+   "d": 40,
+   "d2": 6,
+   "flip": false,
+   "op": "new"
+  },
+  {
+   "id": "b1",
+   "type": "primitive",
+   "name": "Nase",
+   "kind": "box",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 22,
+   "cy": 0,
+   "w": 4,
+   "l": 4,
+   "h": 4,
+   "d": 20,
+   "d2": 6,
+   "flip": false,
+   "op": "new"
+  },
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Punkte",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 20,
+     "y": 0
+    },
+    {
+     "id": "b",
+     "x": 0,
+     "y": 20
+    },
+    {
+     "id": "c",
+     "x": -20,
+     "y": 0
+    }
+   ],
+   "curves": [],
+   "rules": []
+  },
+  {
+   "id": "p1",
+   "type": "pattern",
+   "name": "An Punkten",
+   "kind": "points",
+   "features": [
+    "b1"
+   ],
+   "ptsSketch": "s1",
+   "count": 2,
+   "orient": "face",
+   "face": {
+    "t": "CYLINDRE",
+    "p": [
+     0,
+     0,
+     15
+    ],
+    "r": 20
+   },
+   "faceBody": "c1"
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

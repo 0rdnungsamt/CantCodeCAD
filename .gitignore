@@ -1,0 +1,21 @@
+# Gebaute Programme
+cantcodecad.exe
+desktop/target/
+
+# Protokolle
+tools/diagnose.log
+
+# Eigene Projekte und Sicherungen (nur die Beispiele kommen ins Repository)
+Projekte/*
+!Projekte/Beispiele/
+
+# Pfad zum eigenen Nester (rechnerabhängig)
+tools/nester.json
+
+# Installer (wird mit „cantcodecad Installer bauen.bat“ erzeugt)
+cantcodecad_*-setup.exe
+
+
+# Kopie der eigenen großen Baugruppe für die Kaltstart-Messung (tools/kaltstart.mjs)
+tests/fixtures/_kaltstart.step
+.oss-export

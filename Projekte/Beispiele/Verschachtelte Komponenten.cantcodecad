@@ -1,0 +1,20 @@
+{
+  "format": 2,
+  "app": "cantcodecad",
+  "name": "Verschachtelte Komponenten",
+  "units": "mm",
+  "features": [
+    { "id": "q1", "type": "primitive", "name": "Platte", "kind": "box", "plane": { "kind": "origin", "key": "XY" }, "cx": 0, "cy": 0, "w": 100, "l": 60, "h": 10, "d": 20, "d2": 6, "flip": false, "op": "new", "owner": "rahmen" },
+    { "id": "z1", "type": "primitive", "name": "Bolzen", "kind": "cylinder", "plane": { "kind": "origin", "key": "XY" }, "cx": 40, "cy": 0, "w": 20, "l": 20, "h": 40, "d": 10, "d2": 6, "flip": false, "op": "new", "owner": "bein" },
+    { "id": "mv", "type": "move", "name": "Rahmen versetzen", "comps": ["rahmen"], "bodies": [], "dx": 0, "dy": 0, "dz": 25, "axis": "Z", "angle": 90, "px": 0, "py": 0, "pz": 0, "copy": false }
+  ],
+  "bodies": {
+    "q1": { "name": "Platte", "hidden": false, "material": "steel", "color": "" },
+    "z1": { "name": "Bolzen", "hidden": false, "material": "steel", "color": "" }
+  },
+  "components": [
+    { "id": "rahmen", "name": "Rahmen", "bodies": ["q1"], "parent": null },
+    { "id": "bein", "name": "Bein", "bodies": ["z1"], "parent": "rahmen" }
+  ],
+  "inserts": []
+}

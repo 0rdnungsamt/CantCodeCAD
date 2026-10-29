@@ -1,0 +1,579 @@
+{
+ "created": "2026-10-29T02:22:51.906Z",
+ "examples": {
+  "Beispiele/Anordnung an Punkten.cantcodecad": {
+   "features": 3, "flat": false, "errors": [],
+   "bodies": {
+    "b1": {"volume":1000,"area":600,"faces":6,"edges":12,"bbox":[[-5,-5,0],[5,5,10]]},
+    "p1:1:0": {"volume":1000,"area":600,"faces":6,"edges":12,"bbox":[[25,-5,0],[35,5,10]]},
+    "p1:2:1": {"volume":1000,"area":600,"faces":6,"edges":12,"bbox":[[-5,35,0],[5,45,10]]},
+    "p1:3:2": {"volume":1000,"area":600,"faces":6,"edges":12,"bbox":[[45,45,0],[55,55,10]]}
+   }
+  },
+  "Beispiele/Anordnung an einer Zylinderfläche.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "b1": {"volume":64,"area":96,"faces":6,"edges":12,"bbox":[[20,-2,0],[24,2,4]]},
+    "c1": {"volume":37699.112,"area":6283.185,"faces":3,"edges":3,"bbox":[[-20,-20,0],[20,20,30]]},
+    "p1:1:0": {"volume":64,"area":96,"faces":6,"edges":12,"bbox":[[-2,20,0],[2,24,4]]},
+    "p1:2:1": {"volume":64,"area":96,"faces":6,"edges":12,"bbox":[[-24,-2,0],[-20,2,4]]}
+   }
+  },
+  "Beispiele/Band mit Formschräge abgewickelt 2mm.cantcodecad": {
+   "features": 8, "flat": true, "errors": [],
+   "bodies": {
+    "e1": {"volume":17641.897,"area":19036.641,"faces":22,"edges":60,"bbox":[[-5.2898,-5.2898,2.5],[105.2898,65.2898,30]]}
+   }
+  },
+  "Beispiele/Beispiel-Baugruppe.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "0x86avsdcr/e1": {"volume":1761.996,"area":1009.978,"faces":6,"edges":8,"bbox":[[58.5,5.5,-14],[71.5,18.5,13]]},
+    "5dvzkimfr3/e1": {"volume":1761.996,"area":1009.978,"faces":6,"edges":8,"bbox":[[28.5,31.5,-14],[41.5,44.5,13]]},
+    "blbq1sgi5c/e1": {"volume":1761.996,"area":1009.978,"faces":6,"edges":8,"bbox":[[58.5,31.5,-14],[71.5,44.5,13]]},
+    "f9nj4988ke/e1": {"volume":50764.248,"area":16507.841,"faces":12,"edges":30,"bbox":[[0,0,0],[80,50,60]]},
+    "i3ehtk4aym/e1": {"volume":1761.996,"area":1009.978,"faces":6,"edges":8,"bbox":[[28.5,5.5,-14],[41.5,18.5,13]]}
+   }
+  },
+  "Beispiele/Bewegungsstudie Arm.cantcodecad": {
+   "features": 7, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":282.743,"area":245.044,"faces":3,"edges":3,"bbox":[[-3,-3,0],[3,3,10]]},
+    "e2": {"volume":1686.062,"area":1378.996,"faces":7,"edges":15,"bbox":[[-6,-5,0],[40,5,4]]},
+    "e3": {"volume":144,"area":168,"faces":6,"edges":12,"bbox":[[28,-16,0],[34,-10,4]]}
+   }
+  },
+  "Beispiele/Bewegungsverknüpfung Arm und Schlitten.cantcodecad": {
+   "features": 10, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":282.743,"area":245.044,"faces":3,"edges":3,"bbox":[[-3,-3,0],[3,3,10]]},
+    "e2": {"volume":1686.062,"area":1378.996,"faces":7,"edges":15,"bbox":[[-6,-5,0],[40,5,4]]},
+    "e3": {"volume":1200,"area":1120,"faces":6,"edges":12,"bbox":[[0,-65,0],[60,-60,4]]},
+    "e4": {"volume":200,"area":220,"faces":6,"edges":12,"bbox":[[25,-70,0],[35,-65,4]]}
+   }
+  },
+  "Beispiele/Blech mit Saum 2mm.cantcodecad": {
+   "features": 3, "flat": true, "errors": [],
+   "bodies": {
+    "b1": {"volume":13120.214,"area":13887.342,"faces":14,"edges":32,"bbox":[[0,-3.1623,0],[103.7947,61.2649,8]]}
+   }
+  },
+  "Beispiele/Blech mit offenem Saum 2mm.cantcodecad": {
+   "features": 3, "flat": true, "errors": [],
+   "bodies": {
+    "b1": {"volume":22308.213,"area":23229.098,"faces":11,"edges":27,"bbox":[[0,0,0],[123.5,80,7]]}
+   }
+  },
+  "Beispiele/Bogen parallel gezogen.cantcodecad": {
+   "features": 3, "flat": false, "errors": [],
+   "bodies": {
+    "w1": {"volume":3926.991,"area":2235.069,"faces":4,"edges":6,"bbox":[[-5,-5,0],[55,5,50]]}
+   }
+  },
+  "Beispiele/Bohrung in Rundung und mit Kantenmaßen.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "pr": {"volume":46684.956,"area":14445.752,"faces":12,"edges":30,"bbox":[[0,0,0],[100,60,8]]}
+   }
+  },
+  "Beispiele/Bolzen M8x22.cantcodecad": {
+   "features": 5, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":1761.996,"area":1009.978,"faces":6,"edges":8,"bbox":[[-6.5,-6.5,0],[6.5,6.5,27]]}
+   }
+  },
+  "Beispiele/Bolzen in Platte (Abhängigkeiten).cantcodecad": {
+   "features": 5, "flat": false, "errors": [],
+   "bodies": {
+    "g1": {"volume":23214.602,"area":6957.08,"faces":7,"edges":15,"bbox":[[-30,-20,0],[30,20,10]]},
+    "z1": {"volume":3298.672,"area":1759.292,"faces":5,"edges":6,"bbox":[[-10,-10,-20],[10,10,13]]}
+   }
+  },
+  "Beispiele/Doppelsaum mit Durchbruch 2mm.cantcodecad": {
+   "features": 5, "flat": true, "errors": [],
+   "bodies": {
+    "b1": {"volume":24422.195,"area":25569.93,"faces":27,"edges":75,"bbox":[[0,0,0],[123,80,10]]}
+   }
+  },
+  "Beispiele/Drehung symmetrisch.cantcodecad": {
+   "features": 2, "flat": false, "errors": [],
+   "bodies": {
+    "r1": {"volume":3926.991,"area":1770.796,"faces":6,"edges":12,"bbox":[[14.1421,-21.2132,0],[30,21.2132,10]]}
+   }
+  },
+  "Beispiele/Dünn extrudierte Hohlprofile.cantcodecad": {
+   "features": 6, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":4608,"area":3840,"faces":10,"edges":24,"bbox":[[-20,-15,0],[20,15,12]]},
+    "e2": {"volume":1256.637,"area":1507.964,"faces":4,"edges":6,"bbox":[[49,-11,0],[71,11,10]]},
+    "e3": {"volume":2450.124,"area":3062.655,"faces":14,"edges":30,"bbox":[[-17,43,0],[17,77,8]]}
+   }
+  },
+  "Beispiele/Dünne Wände aus offenen Linienzügen.cantcodecad": {
+   "features": 8, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":12000,"area":5440,"faces":6,"edges":12,"bbox":[[0,0,0],[100,6,20]]},
+    "e2": {"volume":70000,"area":30400,"faces":10,"edges":24,"bbox":[[-2.5,0,0],[62.5,42.5,100]]},
+    "e3": {"volume":4712.389,"area":2633.274,"faces":6,"edges":12,"bbox":[[0,0,0],[53,53,10]]},
+    "e4": {"volume":880,"area":1252,"faces":16,"edges":36,"bbox":[[-2,-2,0],[60,12,5]]}
+   }
+  },
+  "Beispiele/Ellipse und Spline.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "x1": {"volume":15164.447,"area":4604.642,"faces":4,"edges":6,"bbox":[[-40,-15,0],[20,15,10]]},
+    "x2": {"volume":5094.608,"area":2753.205,"faces":4,"edges":6,"bbox":[[60,0,0],[120,25.3584,5]]}
+   }
+  },
+  "Beispiele/Erhebung Rohrübergang.cantcodecad": {
+   "features": 3, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":13194.689,"area":9189.06,"faces":4,"edges":6,"bbox":[[-20,-20,0],[20,20,50]]}
+   }
+  },
+  "Beispiele/Erhebung entlang Mittellinie.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":18325.959,"area":5222.091,"faces":6,"edges":12,"bbox":[[-5.0918,-10,0],[50,10,60]]}
+   }
+  },
+  "Beispiele/Erhebung geschlossener Ring.cantcodecad": {
+   "features": 9, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":98711.445,"area":19741.524,"faces":2,"edges":4,"bbox":[[-60,-60,-10],[60.0005,60,10]]}
+   }
+  },
+  "Beispiele/Erhebung mit Schienen.cantcodecad": {
+   "features": 5, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":36258.861,"area":6282.135,"faces":162,"edges":324,"bbox":[[-15,-15,0],[15,15,50]]}
+   }
+  },
+  "Beispiele/Erhebung mit geteilter Kante.cantcodecad": {
+   "features": 3, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":3920,"area":1724.635,"faces":6,"edges":12,"bbox":[[0,0,0],[20,10,30]]}
+   }
+  },
+  "Beispiele/Extrusion Start von einer Fläche.cantcodecad": {
+   "features": 8, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":14400,"area":4080,"faces":6,"edges":12,"bbox":[[-20,-15,0],[20,15,12]]},
+    "e2": {"volume":785.398,"area":471.239,"faces":3,"edges":3,"bbox":[[-5,40,12],[5,50,22]]},
+    "e3": {"volume":1000,"area":600,"faces":6,"edges":12,"bbox":[[40,30,8],[50,40,18]]},
+    "e4": {"volume":141.372,"area":150.796,"faces":3,"edges":3,"bbox":[[-43,-3,7],[-37,3,12]]}
+   }
+  },
+  "Beispiele/Extrusion zwei Seiten und Startversatz.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":10364.61,"area":3503.538,"faces":10,"edges":20,"bbox":[[-20,-15,-3],[20,15,6]]},
+    "e2": {"volume":3141.593,"area":1256.637,"faces":3,"edges":3,"bbox":[[-10,50,5],[10,70,15]]}
+   }
+  },
+  "Beispiele/Flachstab verdreht.cantcodecad": {
+   "features": 3, "flat": false, "errors": [],
+   "bodies": {
+    "w1": {"volume":15000.006,"area":7355.322,"faces":6,"edges":12,"bbox":[[-15.2069,-15.2069,0],[15.2069,15.2069,100]]}
+   }
+  },
+  "Beispiele/Flansch mit Arbeitsachse.cantcodecad": {
+   "features": 7, "flat": false, "errors": [],
+   "bodies": {
+    "sc": {"volume":23624.777,"area":11460.53,"faces":9,"edges":21,"bbox":[[10,-40,0],[90,40,5]]},
+    "tl:0": {"volume":23624.777,"area":11460.53,"faces":9,"edges":21,"bbox":[[10,-40,5],[90,40,10]]}
+   }
+  },
+  "Beispiele/Fräser entlang Pfad.cantcodecad": {
+   "features": 6, "flat": false, "errors": [],
+   "bodies": {
+    "k1": {"volume":523.599,"area":314.159,"faces":1,"edges":3,"bbox":[[-5,-5,-5],[5,5,5]]},
+    "w1": {"volume":6771.017,"area":2805.973,"faces":5,"edges":15,"bbox":[[-5,-5,-5],[55,35,5]]},
+    "w2": {"volume":8731.748,"area":3639.049,"faces":9,"edges":21,"bbox":[[-5,95,0],[55,135,10]]},
+    "z1": {"volume":785.398,"area":471.239,"faces":3,"edges":3,"bbox":[[-5,95,0],[5,105,10]]}
+   }
+  },
+  "Beispiele/Gewindebohrung mit Teillänge.cantcodecad": {
+   "features": 2, "flat": false, "errors": [],
+   "bodies": {
+    "pr": {"volume":17192.843,"area":5835.468,"faces":13,"edges":27,"bbox":[[0,0,0],[30,30,20]]}
+   }
+  },
+  "Beispiele/Gitter in einem Quader.cantcodecad": {
+   "features": 2, "flat": false, "errors": [],
+   "bodies": {
+    "g1": {"volume":4469.639,"area":4938.171,"faces":26320,"edges":39480,"bbox":[[-10,-10,0],[10,10,20]]},
+    "q1": {"volume":8000,"area":2400,"faces":6,"edges":12,"bbox":[[-10,-10,0],[10,10,20]]}
+   }
+  },
+  "Beispiele/Gussgehäuse mit Formschräge.cantcodecad": {
+   "features": 3, "flat": false, "errors": [],
+   "bodies": {
+    "q1": {"volume":18598.414,"area":12997.91,"faces":11,"edges":24,"bbox":[[-30,-20,0],[30,20,25]]}
+   }
+  },
+  "Beispiele/Halter Teil-Laschen 2mm.cantcodecad": {
+   "features": 3, "flat": true, "errors": [],
+   "bodies": {
+    "b1": {"volume":17877.416,"area":18927.646,"faces":32,"edges":90,"bbox":[[0,-4,0],[100,64,30]]}
+   }
+  },
+  "Beispiele/Kasten Blech 2mm.cantcodecad": {
+   "features": 3, "flat": true, "errors": [],
+   "bodies": {
+    "b1": {"volume":29361.274,"area":30593.203,"faces":32,"edges":90,"bbox":[[-4,-4,0],[104,64,30]]}
+   }
+  },
+  "Beispiele/Kasten Blech geschlossen 2mm.cantcodecad": {
+   "features": 3, "flat": true, "errors": [],
+   "bodies": {
+    "b1": {"volume":32231.674,"area":33684.403,"faces":48,"edges":122,"bbox":[[-4,-4,0],[104,64,30]]}
+   }
+  },
+  "Beispiele/Kasten aus Zuschnitt gefaltet 2mm.cantcodecad": {
+   "features": 4, "flat": true, "errors": [],
+   "bodies": {
+    "b1": {"volume":16118.902,"area":16921.918,"faces":30,"edges":68,"bbox":[[18.2619,18.2619,0],[81.7381,81.7381,21.7381]]}
+   }
+  },
+  "Beispiele/Kasten mit runden Ecken abgewickelt und zurückgefaltet 2mm.cantcodecad": {
+   "features": 8, "flat": true, "errors": [],
+   "bodies": {
+    "e1": {"volume":34893.097,"area":35639.363,"faces":23,"edges":60,"bbox":[[0,0,0],[100,60,40]]}
+   }
+  },
+  "Beispiele/Kasten mit runden Ecken in Blech umgewandelt 2mm.cantcodecad": {
+   "features": 4, "flat": true, "errors": [],
+   "bodies": {
+    "e1": {"volume":35293.097,"area":35919.363,"faces":19,"edges":48,"bbox":[[0,0,0],[100,60,40]]}
+   }
+  },
+  "Beispiele/Kegel gezogen.cantcodecad": {
+   "features": 6, "flat": false, "errors": [],
+   "bodies": {
+    "w1": {"volume":66916.83,"area":10484.714,"faces":4,"edges":6,"bbox":[[-18.7489,-18.7489,0],[18.7489,18.7489,100]]},
+    "w2": {"volume":66916.83,"area":10484.714,"faces":6,"edges":10,"bbox":[[81.2511,-18.7489,0],[118.7489,18.7489,100]]}
+   }
+  },
+  "Beispiele/Lochbild auf 500 mm.cantcodecad": {
+   "features": 3, "flat": false, "errors": [],
+   "bodies": {
+    "q1": {"volume":788596.019,"area":212495.907,"faces":21,"edges":57,"bbox":[[-250,-100,0],[250,100,8]]}
+   }
+  },
+  "Beispiele/Lotrechte Ebene mit Steg.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "gp": {"volume":264000,"area":59694.427,"faces":11,"edges":24,"bbox":[[-100,-60,0],[100,60,50]]}
+   }
+  },
+  "Beispiele/Muster auf Pfad mit Startpunkt.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":1000,"area":600,"faces":6,"edges":12,"bbox":[[45,-5,0],[55,5,10]]},
+    "pt:1:0": {"volume":1000,"area":600,"faces":6,"edges":12,"bbox":[[25,-5,0],[35,5,10]]},
+    "pt:2:1": {"volume":1000,"area":600,"faces":6,"edges":12,"bbox":[[65,-5,0],[75,5,10]]}
+   }
+  },
+  "Beispiele/Muster entlang Pfad.cantcodecad": {
+   "features": 5, "flat": false, "errors": [],
+   "bodies": {
+    "c1": {"volume":787.487,"area":2008.908,"faces":10,"edges":16,"bbox":[[-8.8,-48.8,-0.8],[8.8,-31.2,28.064]]},
+    "e1": {"volume":60,"area":104,"faces":6,"edges":12,"bbox":[[-3,-1,0],[3,1,5]]},
+    "pt:1:0": {"volume":60,"area":104,"faces":6,"edges":12,"bbox":[[16.4248,-1,0],[22.4248,1,5]]},
+    "pt:2:1": {"volume":60,"area":104,"faces":6,"edges":12,"bbox":[[35.8495,-1,0],[41.8495,1,5]]},
+    "pt:3:2": {"volume":60,"area":104,"faces":6,"edges":12,"bbox":[[55.0113,-0.6381,0],[61.3283,2.9058,5]]},
+    "pt:4:3": {"volume":60,"area":104,"faces":6,"edges":12,"bbox":[[71.3209,8.9083,0],[76.5347,14.9006,5]]},
+    "pt:5:4": {"volume":60,"area":104,"faces":6,"edges":12,"bbox":[[78.9908,26.9969,0],[81.0092,33.0031,5]]}
+   }
+  },
+  "Beispiele/Nasen auf Benutzerkoordinatensystem.cantcodecad": {
+   "features": 5, "flat": false, "errors": [],
+   "bodies": {
+    "bl": {"volume":534000,"area":67100,"faces":21,"edges":48,"bbox":[[-100,-60,0],[100,60,35]]}
+   }
+  },
+  "Beispiele/Platte Teilefamilie.cantcodecad": {
+   "features": 3, "flat": false, "errors": [],
+   "bodies": {
+    "bx": {"volume":35607.301,"area":16200,"faces":7,"edges":15,"bbox":[[-60,-30,0],[60,30,5]]}
+   }
+  },
+  "Beispiele/Prägen auf Zylinder.cantcodecad": {
+   "features": 2, "flat": false, "errors": [],
+   "bodies": {
+    "c1": {"volume":37699.112,"area":6283.185,"faces":3,"edges":3,"bbox":[[-20,-20,0],[20,20,30]]}
+   }
+  },
+  "Beispiele/Rohr beidseitig gezogen.cantcodecad": {
+   "features": 3, "flat": false, "errors": [],
+   "bodies": {
+    "w1": {"volume":40381.974,"area":8704.713,"faces":4,"edges":6,"bbox":[[-10,-10,-30],[50,10,80]]}
+   }
+  },
+  "Beispiele/Rohrbogen im Raum.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "r1": {"volume":12439.595,"area":12615.524,"faces":8,"edges":14,"bbox":[[0,-8,-8],[88,8,70]]},
+    "r2": {"volume":20243.447,"area":6978.767,"faces":3,"edges":3,"bbox":[[-4.3782,34,-4.9307],[124.3782,66,56]]}
+   }
+  },
+  "Beispiele/Rohrbogen.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "r1": {"volume":22294.187,"area":22520.381,"faces":8,"edges":14,"bbox":[[0,-10,-10],[140,80,10]]},
+    "r2": {"volume":4330.127,"area":3086.603,"faces":5,"edges":9,"bbox":[[0,54.2265,-5],[100,62.8868,5]]}
+   }
+  },
+  "Beispiele/Schale in Blech umgewandelt 2mm.cantcodecad": {
+   "features": 4, "flat": true, "errors": [],
+   "bodies": {
+    "e1": {"volume":35712,"area":36352,"faces":11,"edges":24,"bbox":[[0,0,0],[100,60,40]]}
+   }
+  },
+  "Beispiele/Schale mit Auftrennung 2mm.cantcodecad": {
+   "features": 5, "flat": true, "errors": [],
+   "bodies": {
+    "e1": {"volume":35520,"area":36800,"faces":30,"edges":76,"bbox":[[0,0,0],[100,60,40]]}
+   }
+  },
+  "Beispiele/Schale mit Auftrennung zwischen zwei Punkten 2mm.cantcodecad": {
+   "features": 5, "flat": true, "errors": [],
+   "bodies": {
+    "e1": {"volume":35584,"area":36360,"faces":15,"edges":36,"bbox":[[0,0,0],[100,60,40]]}
+   }
+  },
+  "Beispiele/Schale mit Kugelecken in Blech umgewandelt 2mm.cantcodecad": {
+   "features": 5, "flat": true, "errors": [],
+   "bodies": {
+    "e1": {"volume":26840.896,"area":27449.238,"faces":35,"edges":80,"bbox":[[0,0,0],[100,60,30]]}
+   }
+  },
+  "Beispiele/Skalierter Halter.cantcodecad": {
+   "features": 3, "flat": false, "errors": [],
+   "bodies": {
+    "q1": {"volume":40543.008,"area":9277.168,"faces":8,"edges":15,"bbox":[[-30,-22.5,0],[30,22.5,30]]}
+   }
+  },
+  "Beispiele/Stumpfstoß HV-Naht.cantcodecad": {
+   "features": 5, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":22720,"area":6548.548,"faces":7,"edges":15,"bbox":[[0,0,0],[60,40,10]]},
+    "e2": {"volume":24000,"area":6800,"faces":6,"edges":12,"bbox":[[60,0,0],[120,40,10]]},
+    "w1": {"volume":1779.2,"area":1418.32,"faces":9,"edges":21,"bbox":[[51,0,2],[61,40,11.3]]}
+   }
+  },
+  "Beispiele/Stumpfstoß V-Naht mit Steg und Spalt.cantcodecad": {
+   "features": 5, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":22860.992,"area":6527.802,"faces":7,"edges":15,"bbox":[[0,0,0],[59,40,10]]},
+    "e2": {"volume":22860.992,"area":6527.802,"faces":7,"edges":15,"bbox":[[61,0,0],[120,40,10]]},
+    "w1": {"volume":3048.273,"area":1833.12,"faces":12,"edges":30,"bbox":[[53.3812,0,0],[66.6188,40,11.5]]}
+   }
+  },
+  "Beispiele/Tangentiale Kette bei Verrundung.cantcodecad": {
+   "features": 9, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":45339.932,"area":7881.474,"faces":18,"edges":40,"bbox":[[0,0,0],[60,40,20]]},
+    "e2": {"volume":45339.932,"area":7881.474,"faces":18,"edges":40,"bbox":[[100,0,0],[160,40,20]]},
+    "e3": {"volume":17680,"area":6492.328,"faces":9,"edges":21,"bbox":[[200,0,0],[260,60,20]]}
+   }
+  },
+  "Beispiele/Text auf Bogen.cantcodecad": {
+   "features": 2, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":343.447,"area":1198.952,"faces":172,"edges":450,"bbox":[[-30.555,29.8544,0],[30.5291,45.9257,3]]}
+   }
+  },
+  "Beispiele/Tischgestell 800x500.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "f1:0": {"volume":325696.988,"area":218343.444,"faces":18,"edges":48,"bbox":[[0,0,-40],[800,40,0]]},
+    "f1:1": {"volume":197132.387,"area":132633.71,"faces":18,"edges":48,"bbox":[[760,0,-40],[800,500,0]]},
+    "f1:2": {"volume":325696.988,"area":218343.444,"faces":18,"edges":48,"bbox":[[0,460,-40],[800,500,0]]},
+    "f1:3": {"volume":197132.387,"area":132633.71,"faces":18,"edges":48,"bbox":[[0,0,-40],[40,500,0]]},
+    "f1:4": {"volume":179990.44,"area":120850.724,"faces":18,"edges":48,"bbox":[[360,40,-40],[400,460,0]]},
+    "f1:5": {"volume":299984.067,"area":200846.476,"faces":18,"edges":48,"bbox":[[0,0,-740],[40,40,-40]]},
+    "f1:6": {"volume":299984.067,"area":200846.476,"faces":18,"edges":48,"bbox":[[760,0,-740],[800,40,-40]]},
+    "f1:7": {"volume":299984.067,"area":200846.476,"faces":18,"edges":48,"bbox":[[0,460,-740],[40,500,-40]]},
+    "f1:8": {"volume":299984.067,"area":200846.476,"faces":18,"edges":48,"bbox":[[760,460,-740],[800,500,-40]]}
+   }
+  },
+  "Beispiele/Tischgestell geschweißt.cantcodecad": {
+   "features": 6, "flat": false, "errors": [],
+   "bodies": {
+    "f1:0": {"volume":325696.988,"area":218343.444,"faces":18,"edges":48,"bbox":[[0,0,-40],[800,40,0]]},
+    "f1:1": {"volume":197132.387,"area":132633.71,"faces":18,"edges":48,"bbox":[[760,0,-40],[800,500,0]]},
+    "f1:2": {"volume":325696.988,"area":218343.444,"faces":18,"edges":48,"bbox":[[0,460,-40],[800,500,0]]},
+    "f1:3": {"volume":197132.387,"area":132633.71,"faces":18,"edges":48,"bbox":[[0,0,-40],[40,500,0]]},
+    "f1:4": {"volume":179990.44,"area":120850.724,"faces":18,"edges":48,"bbox":[[360,40,-40],[400,460,0]]},
+    "f1:5": {"volume":299984.067,"area":200846.476,"faces":18,"edges":48,"bbox":[[0,0,-740],[40,40,-40]]},
+    "f1:6": {"volume":299984.067,"area":200846.476,"faces":18,"edges":48,"bbox":[[760,0,-740],[800,40,-40]]},
+    "f1:7": {"volume":299984.067,"area":200846.476,"faces":18,"edges":48,"bbox":[[0,460,-740],[40,500,-40]]},
+    "f1:8": {"volume":299984.067,"area":200846.476,"faces":18,"edges":48,"bbox":[[760,460,-740],[800,500,-40]]},
+    "w1": {"volume":2231.976,"area":3736.321,"faces":40,"edges":72,"bbox":[[4.5,4.5,-44.2426],[795.5,495.5,-40]]},
+    "w2": {"volume":1115.988,"area":1868.161,"faces":20,"edges":36,"bbox":[[355.7574,40,-35.5],[404.2426,460,-4.5]]}
+   }
+  },
+  "Beispiele/Tischgestell mit Knotenblechen.cantcodecad": {
+   "features": 8, "flat": false, "errors": [],
+   "bodies": {
+    "ec1:0": {"volume":12500,"area":6000,"faces":6,"edges":12,"bbox":[[-5,-5,-745],[45,45,-740]]},
+    "ec1:1": {"volume":12500,"area":6000,"faces":6,"edges":12,"bbox":[[755,-5,-745],[805,45,-740]]},
+    "ec1:2": {"volume":12500,"area":6000,"faces":6,"edges":12,"bbox":[[-5,455,-745],[45,505,-740]]},
+    "ec1:3": {"volume":12500,"area":6000,"faces":6,"edges":12,"bbox":[[755,455,-745],[805,505,-740]]},
+    "f1:0": {"volume":325696.988,"area":218343.444,"faces":18,"edges":48,"bbox":[[0,0,-40],[800,40,0]]},
+    "f1:1": {"volume":197132.387,"area":132633.71,"faces":18,"edges":48,"bbox":[[760,0,-40],[800,500,0]]},
+    "f1:2": {"volume":325696.988,"area":218343.444,"faces":18,"edges":48,"bbox":[[0,460,-40],[800,500,0]]},
+    "f1:3": {"volume":197132.387,"area":132633.71,"faces":18,"edges":48,"bbox":[[0,0,-40],[40,500,0]]},
+    "f1:4": {"volume":179990.44,"area":120850.724,"faces":18,"edges":48,"bbox":[[360,40,-40],[400,460,0]]},
+    "f1:5": {"volume":299984.067,"area":200846.476,"faces":18,"edges":48,"bbox":[[0,0,-740],[40,40,-40]]},
+    "f1:6": {"volume":299984.067,"area":200846.476,"faces":18,"edges":48,"bbox":[[760,0,-740],[800,40,-40]]},
+    "f1:7": {"volume":299984.067,"area":200846.476,"faces":18,"edges":48,"bbox":[[0,460,-740],[40,500,-40]]},
+    "f1:8": {"volume":299984.067,"area":200846.476,"faces":18,"edges":48,"bbox":[[760,460,-740],[800,500,-40]]},
+    "gs1:0": {"volume":8750,"area":4494.972,"faces":6,"edges":12,"bbox":[[17.5,40.0001,-100],[22.5,100,-40.0001]]},
+    "gs1:1": {"volume":8750,"area":4494.972,"faces":6,"edges":12,"bbox":[[40.0001,17.5,-100],[100,22.5,-40.0001]]},
+    "w1": {"volume":2231.976,"area":3736.321,"faces":40,"edges":72,"bbox":[[4.5,4.5,-44.2426],[795.5,495.5,-40]]},
+    "w2": {"volume":1115.988,"area":1868.161,"faces":20,"edges":36,"bbox":[[355.7574,40,-35.5],[404.2426,460,-4.5]]}
+   }
+  },
+  "Beispiele/Treppenblock 100x30x40.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":96000,"area":14800,"faces":8,"edges":18,"bbox":[[0,0,0],[100,30,40]]}
+   }
+  },
+  "Beispiele/Trichter an Führungsschiene.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "w1": {"volume":293215.314,"area":25506.036,"faces":4,"edges":6,"bbox":[[-40,-40,0],[40,40,100]]}
+   }
+  },
+  "Beispiele/U-Halter Blech 2mm.cantcodecad": {
+   "features": 3, "flat": true, "errors": [],
+   "bodies": {
+    "b1": {"volume":24083.894,"area":25070.124,"faces":16,"edges":42,"bbox":[[0,-4,0],[100,64,30]]}
+   }
+  },
+  "Beispiele/U-Profil an zwei Linien gefaltet 2mm.cantcodecad": {
+   "features": 4, "flat": true, "errors": [],
+   "bodies": {
+    "b1": {"volume":12045.239,"area":12686.747,"faces":14,"edges":36,"bbox":[[28.2619,0,0],[71.7381,60,31.7381]]}
+   }
+  },
+  "Beispiele/U-Profil mit Schlitz über stehender Biegung 2mm.cantcodecad": {
+   "features": 8, "flat": true, "errors": [],
+   "bodies": {
+    "k1": {"volume":15025.664,"area":16257.662,"faces":22,"edges":66,"bbox":[[0,0,0],[80,60,30]]}
+   }
+  },
+  "Beispiele/U-Profil mit einer abgewickelten Biegung 2mm.cantcodecad": {
+   "features": 5, "flat": true, "errors": [],
+   "bodies": {
+    "k1": {"volume":15851.506,"area":16707.389,"faces":12,"edges":30,"bbox":[[-26.5239,0,0],[80,60,30]]}
+   }
+  },
+  "Beispiele/Verschachtelte Komponenten.cantcodecad": {
+   "features": 3, "flat": false, "errors": [],
+   "bodies": {
+    "q1": {"volume":60000,"area":15200,"faces":6,"edges":12,"bbox":[[-30,-50,25],[30,50,35]]},
+    "z1": {"volume":3141.593,"area":1413.717,"faces":3,"edges":3,"bbox":[[-5,35,25],[5,45,65]]}
+   }
+  },
+  "Beispiele/Verschieben Punkt zu Punkt und entlang Kante.cantcodecad": {
+   "features": 11, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":12000,"area":4000,"faces":6,"edges":12,"bbox":[[-30,-10,0],[30,10,10]]},
+    "e2": {"volume":1000,"area":600,"faces":6,"edges":12,"bbox":[[20,10,10],[30,20,20]]},
+    "e3": {"volume":512,"area":384,"faces":6,"edges":12,"bbox":[[65,-4,0],[73,4,8]]},
+    "e4": {"volume":576,"area":432,"faces":6,"edges":12,"bbox":[[14,20,0],[20,32,8]]}
+   }
+  },
+  "Beispiele/Wanne mit Formschräge in Blech umgewandelt 2mm.cantcodecad": {
+   "features": 4, "flat": true, "errors": [],
+   "bodies": {
+    "e1": {"volume":30059.026,"area":30746.386,"faces":19,"edges":48,"bbox":[[-5.2898,-5.2898,0],[105.2898,65.2898,30]]}
+   }
+  },
+  "Beispiele/Winkel 80x60x8.cantcodecad": {
+   "features": 4, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":50764.248,"area":16507.841,"faces":12,"edges":30,"bbox":[[0,0,0],[80,50,60]]}
+   }
+  },
+  "Beispiele/Winkel mit Rippe verschraubt.cantcodecad": {
+   "features": 18, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":52812.248,"area":17456.86,"faces":15,"edges":39,"bbox":[[0,0,0],[80,50,60]]},
+    "fn1": {"volume":653.431,"area":669.315,"faces":9,"edges":21,"bbox":[[27.4944,31.5,-8.4],[42.5056,44.5,-1.6]]},
+    "fn2": {"volume":653.431,"area":669.315,"faces":9,"edges":21,"bbox":[[57.4944,31.5,-8.4],[72.5056,44.5,-1.6]]},
+    "fn3": {"volume":653.431,"area":669.315,"faces":9,"edges":21,"bbox":[[27.4944,5.5,-8.4],[42.5056,18.5,-1.6]]},
+    "fn4": {"volume":653.431,"area":669.315,"faces":9,"edges":21,"bbox":[[57.4944,5.5,-8.4],[72.5056,18.5,-1.6]]},
+    "fs1": {"volume":2445.115,"area":1429.311,"faces":12,"edges":24,"bbox":[[28.5,31.5,-22],[41.5,44.5,16]]},
+    "fs2": {"volume":2445.115,"area":1429.311,"faces":12,"edges":24,"bbox":[[58.5,31.5,-22],[71.5,44.5,16]]},
+    "fs3": {"volume":2445.115,"area":1429.311,"faces":12,"edges":24,"bbox":[[28.5,5.5,-22],[41.5,18.5,16]]},
+    "fs4": {"volume":2445.115,"area":1429.311,"faces":12,"edges":24,"bbox":[[58.5,5.5,-22],[71.5,18.5,16]]},
+    "fw1": {"volume":233.031,"area":413.936,"faces":4,"edges":6,"bbox":[[27,30,-1.6],[43,46,0]]},
+    "fw2": {"volume":233.031,"area":413.936,"faces":4,"edges":6,"bbox":[[57,30,-1.6],[73,46,0]]},
+    "fw3": {"volume":233.031,"area":413.936,"faces":4,"edges":6,"bbox":[[27,4,-1.6],[43,20,0]]},
+    "fw4": {"volume":233.031,"area":413.936,"faces":4,"edges":6,"bbox":[[57,4,-1.6],[73,20,0]]}
+   }
+  },
+  "Beispiele/Winkel mit Rippe.cantcodecad": {
+   "features": 6, "flat": false, "errors": [],
+   "bodies": {
+    "e1": {"volume":52812.248,"area":17456.86,"faces":15,"edges":39,"bbox":[[0,0,0],[80,50,60]]}
+   }
+  },
+  "Beispiele/Winkelblech gebogen 2mm.cantcodecad": {
+   "features": 4, "flat": true, "errors": [],
+   "bodies": {
+    "b1": {"volume":11885.772,"area":12609.464,"faces":12,"edges":30,"bbox":[[48.2619,0,0],[100,60,51.7381]]}
+   }
+  },
+  "Beispiele/Winkelblech mit Schlitz über Biegung 2mm.cantcodecad": {
+   "features": 8, "flat": true, "errors": [],
+   "bodies": {
+    "b1": {"volume":11482.002,"area":12326.448,"faces":18,"edges":54,"bbox":[[48.2619,0,0],[100,60,51.7381]]}
+   }
+  },
+  "Beispiele/Winkelblech schräg gebogen 2mm.cantcodecad": {
+   "features": 4, "flat": true, "errors": [],
+   "bodies": {
+    "b1": {"volume":11901.207,"area":12629.953,"faces":18,"edges":40,"bbox":[[34.3511,-12.0828,0],[100,61.2649,58.6591]]}
+   }
+  },
+  "Beispiele/Z-Profil Blech 2mm.cantcodecad": {
+   "features": 4, "flat": true, "errors": [],
+   "bodies": {
+    "k1": {"volume":12754.126,"area":13506.763,"faces":16,"edges":42,"bbox":[[0,0,0],[80,60,32]]}
+   }
+  },
+  "Beispiele/Zwei Bleche durch Biegung verbunden 2mm.cantcodecad": {
+   "features": 3, "flat": true, "errors": [],
+   "bodies": {
+    "pa": {"volume":19045.487,"area":19920.336,"faces":10,"edges":24,"bbox":[[0,0,0],[112,60,50]]}
+   }
+  },
+  "Beispiele/Übergang Rechteck auf Rund 2mm.cantcodecad": {
+   "features": 3, "flat": true, "errors": [],
+   "bodies": {
+    "t1": {"volume":134465.097,"area":138379.656,"faces":80,"edges":122,"bbox":[[-103.5143,-77.696,-3.247],[103.5143,77.696,121.1303]]}
+   }
+  },
+  "Beispiele/Übergangslasche Blechmitte 2mm.cantcodecad": {
+   "features": 3, "flat": true, "errors": [],
+   "bodies": {
+    "t1": {"volume":15999.079,"area":16639.949,"faces":22,"edges":40,"bbox":[[-21,-21,0],[21,21,50]]}
+   }
+  },
+  "Beispiele/Übergangslasche über drei Profile 2mm.cantcodecad": {
+   "features": 9, "flat": true, "errors": [],
+   "bodies": {
+    "t1": {"volume":33598.084,"area":34271.825,"faces":26,"edges":47,"bbox":[[-22,-22,0],[22,22,100]]},
+    "t2": {"volume":50496.127,"area":51503.386,"faces":44,"edges":69,"bbox":[[108.1115,-41.9612,-0.7553],[191.8885,41.8885,100]]},
+    "t3": {"volume":50495.976,"area":51503.362,"faces":34,"edges":54,"bbox":[[108.1115,-41.9612,-0.7553],[191.8885,41.8885,100]]}
+   }
+  }
+ }
+}

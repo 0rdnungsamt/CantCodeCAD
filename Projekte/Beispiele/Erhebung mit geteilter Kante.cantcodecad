@@ -1,0 +1,78 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Erhebung mit geteilter Kante",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Rechteck 20 × 10",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [0, 0, 0],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "a", "x": 0, "y": 0 },
+    { "id": "b", "x": 20, "y": 0 },
+    { "id": "c", "x": 20, "y": 10 },
+    { "id": "m", "x": 10, "y": 10 },
+    { "id": "d", "x": 0, "y": 10 }
+   ],
+   "curves": [
+    { "id": "l1", "type": "line", "p1": "a", "p2": "b" },
+    { "id": "l2", "type": "line", "p1": "b", "p2": "c" },
+    { "id": "l3", "type": "line", "p1": "c", "p2": "m" },
+    { "id": "l4", "type": "line", "p1": "m", "p2": "d" },
+    { "id": "l5", "type": "line", "p1": "d", "p2": "a" }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Rechteck 12 × 6",
+   "plane": {
+    "key": "FACE",
+    "label": "Ebene z = 30",
+    "o": [0, 0, 30],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "a", "x": 0, "y": 0 },
+    { "id": "b", "x": 12, "y": 0 },
+    { "id": "c", "x": 12, "y": 6 },
+    { "id": "m", "x": 6, "y": 6 },
+    { "id": "d", "x": 0, "y": 6 }
+   ],
+   "curves": [
+    { "id": "l1", "type": "line", "p1": "a", "p2": "b" },
+    { "id": "l2", "type": "line", "p1": "b", "p2": "c" },
+    { "id": "l3", "type": "line", "p1": "c", "p2": "m" },
+    { "id": "l4", "type": "line", "p1": "m", "p2": "d" },
+    { "id": "l5", "type": "line", "p1": "d", "p2": "a" }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "loft",
+   "name": "Übergang",
+   "sections": [
+    { "sketch": "s1", "profile": null },
+    { "sketch": "s2", "profile": null }
+   ],
+   "ruled": false,
+   "op": "new"
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

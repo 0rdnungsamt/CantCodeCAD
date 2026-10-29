@@ -1,0 +1,21 @@
+{
+  "format": 2,
+  "app": "cantcodecad",
+  "name": "Gussgehäuse mit Formschräge",
+  "units": "mm",
+  "features": [
+    { "id": "q1", "type": "primitive", "name": "Quader1", "kind": "box", "plane": { "kind": "origin", "key": "XY" }, "cx": 0, "cy": 0, "w": 60, "l": 40, "h": 25, "d": 20, "d2": 6, "flip": false, "op": "new" },
+    { "id": "fs1", "type": "draft", "name": "Formschräge1", "angle": 3, "flip": false,
+      "plane": { "kind": "face", "plane": { "key": "FACE", "label": "Fläche des Körpers", "o": [0, 0, 0], "x": [-1, 0, 0], "y": [0, 1, 0], "n": [0, 0, -1] } },
+      "faces": [
+        { "t": "PLANE", "n": [1, 0, 0], "dist": 30, "p": [30, 0, 12.5] },
+        { "t": "PLANE", "n": [-1, 0, 0], "dist": 30, "p": [-30, 0, 12.5] },
+        { "t": "PLANE", "n": [0, 1, 0], "dist": 20, "p": [0, 20, 12.5] },
+        { "t": "PLANE", "n": [0, -1, 0], "dist": 20, "p": [0, -20, 12.5] }
+      ] },
+    { "id": "sh1", "type": "shell", "name": "Schale1", "thickness": 3, "faces": [ { "t": "PLANE", "n": [0, 0, -1], "dist": 0, "p": [0, 0, 0] } ] }
+  ],
+  "bodies": {},
+  "components": [],
+  "inserts": []
+}

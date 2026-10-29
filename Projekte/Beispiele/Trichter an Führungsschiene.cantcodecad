@@ -1,0 +1,168 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Trichter an Führungsschiene",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Kreis R 20",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 20
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Pfad",
+   "plane": {
+    "key": "XZ",
+    "label": "XZ · Vorderansicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "p",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "q",
+     "x": 0,
+     "y": 100
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "p",
+     "p2": "q"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s3",
+   "type": "sketch",
+   "name": "Schiene",
+   "plane": {
+    "key": "XZ",
+    "label": "XZ · Vorderansicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "p",
+     "x": 20,
+     "y": 0
+    },
+    {
+     "id": "q",
+     "x": 40,
+     "y": 100
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "p",
+     "p2": "q"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "w1",
+   "type": "sweep",
+   "name": "Trichter",
+   "sketch": "s1",
+   "path": "s2",
+   "rail": "s3",
+   "railScale": "scale",
+   "corners": "right",
+   "op": "new",
+   "profiles": null
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

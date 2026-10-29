@@ -1,0 +1,72 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Gewindebohrung mit Teillänge",
+ "units": "mm",
+ "features": [
+  {
+   "id": "pr",
+   "type": "primitive",
+   "name": "Klotz",
+   "kind": "box",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 15,
+   "cy": 15,
+   "w": 30,
+   "l": 30,
+   "h": 20,
+   "d": 20,
+   "d2": 6,
+   "flip": false,
+   "op": "new"
+  },
+  {
+   "id": "hg",
+   "type": "hole",
+   "name": "Gewinde M8",
+   "place": "edges",
+   "edgeA": {
+    "t": "LINE",
+    "p": [
+     15,
+     0,
+     20
+    ],
+    "d": [
+     1,
+     0,
+     0
+    ]
+   },
+   "edgeB": {
+    "t": "LINE",
+    "p": [
+     0,
+     15,
+     20
+    ],
+    "d": [
+     0,
+     1,
+     0
+    ]
+   },
+   "offA": 15,
+   "offB": 15,
+   "kind": "simple",
+   "preset": "tap:M8",
+   "d": 6.8,
+   "depthMode": "through",
+   "depth": 20,
+   "tip": "drill",
+   "flip": false,
+   "tapMode": "modeled"
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

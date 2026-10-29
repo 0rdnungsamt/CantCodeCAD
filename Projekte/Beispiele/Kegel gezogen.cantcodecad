@@ -1,0 +1,234 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Kegel gezogen",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Kreis R 10",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 10
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Pfad gerade",
+   "plane": {
+    "key": "XZ",
+    "label": "XZ · Vorderansicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "p",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "q",
+     "x": 0,
+     "y": 100
+    }
+   ],
+   "curves": [
+    {
+     "id": "m1",
+     "type": "line",
+     "p1": "p",
+     "p2": "q"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "w1",
+   "type": "sweep",
+   "name": "Kegel",
+   "sketch": "s1",
+   "path": "s2",
+   "corners": "right",
+   "taper": 5,
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "s3",
+   "type": "sketch",
+   "name": "Kreis R 10 daneben",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 100,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 10
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s4",
+   "type": "sketch",
+   "name": "Pfad zweiteilig rückwärts",
+   "plane": {
+    "key": "XZ",
+    "label": "XZ · Vorderansicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "p",
+     "x": 100,
+     "y": 100
+    },
+    {
+     "id": "q",
+     "x": 100,
+     "y": 40
+    },
+    {
+     "id": "r",
+     "x": 100,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "m1",
+     "type": "line",
+     "p1": "p",
+     "p2": "q"
+    },
+    {
+     "id": "m2",
+     "type": "line",
+     "p1": "q",
+     "p2": "r"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "w2",
+   "type": "sweep",
+   "name": "Kegel zweiteilig",
+   "sketch": "s3",
+   "path": "s4",
+   "corners": "right",
+   "taper": 5,
+   "op": "new",
+   "profiles": null
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

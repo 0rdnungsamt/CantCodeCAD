@@ -1,0 +1,22 @@
+{
+  "format": 2,
+  "app": "cantcodecad",
+  "name": "Bohrung in Rundung und mit Kantenmaßen",
+  "units": "mm",
+  "features": [
+    { "id": "pr", "type": "primitive", "name": "Platte", "kind": "box", "plane": { "kind": "origin", "key": "XY" }, "cx": 50, "cy": 30, "w": 100, "l": 60, "h": 8, "d": 20, "d2": 6, "flip": false, "op": "new" },
+    { "id": "fr", "type": "fillet", "name": "Ecken verrundet r10", "all": false, "radius": 10, "edges": [
+      { "t": "LINE", "p": [0, 0, 4], "d": [0, 0, 1] },
+      { "t": "LINE", "p": [100, 0, 4], "d": [0, 0, 1] },
+      { "t": "LINE", "p": [100, 60, 4], "d": [0, 0, 1] },
+      { "t": "LINE", "p": [0, 60, 4], "d": [0, 0, 1] }
+    ] },
+    { "id": "hc", "type": "hole", "name": "Bohrung in der Rundung", "place": "center", "rings": [{ "t": "CIRCLE", "p": [2.928932, 2.928932, 8] }], "kind": "simple", "preset": "", "d": 6, "depthMode": "through", "depth": 10, "tip": "drill", "flip": false },
+    { "id": "he", "type": "hole", "name": "Bohrung mit Kantenmaßen", "place": "edges", "edgeA": { "t": "LINE", "p": [50, 0, 8], "d": [1, 0, 0] }, "edgeB": { "t": "LINE", "p": [0, 30, 8], "d": [0, 1, 0] }, "offA": 20, "offB": 30, "kind": "simple", "preset": "", "d": 8, "depthMode": "through", "depth": 10, "tip": "drill", "flip": false }
+  ],
+  "bodies": {
+    "p1": { "name": "Platte", "hidden": false, "material": "steel", "color": "" }
+  },
+  "components": [],
+  "inserts": []
+}

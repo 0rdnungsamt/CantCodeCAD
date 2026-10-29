@@ -1,0 +1,170 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Tangentiale Kette bei Verrundung",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Platte mit Ecken Rund 10",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [0, 0, 0],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "t1", "x": 10, "y": 0 },
+    { "id": "t2", "x": 50, "y": 0 },
+    { "id": "t3", "x": 60, "y": 10 },
+    { "id": "t4", "x": 60, "y": 30 },
+    { "id": "t5", "x": 50, "y": 40 },
+    { "id": "t6", "x": 10, "y": 40 },
+    { "id": "t7", "x": 0, "y": 30 },
+    { "id": "t8", "x": 0, "y": 10 },
+    { "id": "m1", "x": 50, "y": 10 },
+    { "id": "m2", "x": 50, "y": 30 },
+    { "id": "m3", "x": 10, "y": 30 },
+    { "id": "m4", "x": 10, "y": 10 }
+   ],
+   "curves": [
+    { "id": "l1", "type": "line", "p1": "t1", "p2": "t2" },
+    { "id": "k1", "type": "arc", "c": "m1", "s": "t2", "e": "t3", "r": 10, "a0": -1.5707963267948966, "a1": 0 },
+    { "id": "l2", "type": "line", "p1": "t3", "p2": "t4" },
+    { "id": "k2", "type": "arc", "c": "m2", "s": "t4", "e": "t5", "r": 10, "a0": 0, "a1": 1.5707963267948966 },
+    { "id": "l3", "type": "line", "p1": "t5", "p2": "t6" },
+    { "id": "k3", "type": "arc", "c": "m3", "s": "t6", "e": "t7", "r": 10, "a0": 1.5707963267948966, "a1": 3.141592653589793 },
+    { "id": "l4", "type": "line", "p1": "t7", "p2": "t8" },
+    { "id": "k4", "type": "arc", "c": "m4", "s": "t8", "e": "t1", "r": 10, "a0": 3.141592653589793, "a1": 4.71238898038469 }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Platte",
+   "sketch": "s1",
+   "distance": 20,
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "f1",
+   "type": "fillet",
+   "name": "eine Kante gewählt – Kette rundet den ganzen Umriss",
+   "all": false,
+   "radius": 5,
+   "edges": [{ "t": "LINE", "p": [30, 40, 20], "d": [1, 0, 0] }]
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Platte 2 mit Ecken Rund 10",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [0, 0, 0],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "t1", "x": 110, "y": 0 },
+    { "id": "t2", "x": 150, "y": 0 },
+    { "id": "t3", "x": 160, "y": 10 },
+    { "id": "t4", "x": 160, "y": 30 },
+    { "id": "t5", "x": 150, "y": 40 },
+    { "id": "t6", "x": 110, "y": 40 },
+    { "id": "t7", "x": 100, "y": 30 },
+    { "id": "t8", "x": 100, "y": 10 },
+    { "id": "m1", "x": 150, "y": 10 },
+    { "id": "m2", "x": 150, "y": 30 },
+    { "id": "m3", "x": 110, "y": 30 },
+    { "id": "m4", "x": 110, "y": 10 }
+   ],
+   "curves": [
+    { "id": "l1", "type": "line", "p1": "t1", "p2": "t2" },
+    { "id": "k1", "type": "arc", "c": "m1", "s": "t2", "e": "t3", "r": 10, "a0": -1.5707963267948966, "a1": 0 },
+    { "id": "l2", "type": "line", "p1": "t3", "p2": "t4" },
+    { "id": "k2", "type": "arc", "c": "m2", "s": "t4", "e": "t5", "r": 10, "a0": 0, "a1": 1.5707963267948966 },
+    { "id": "l3", "type": "line", "p1": "t5", "p2": "t6" },
+    { "id": "k3", "type": "arc", "c": "m3", "s": "t6", "e": "t7", "r": 10, "a0": 1.5707963267948966, "a1": 3.141592653589793 },
+    { "id": "l4", "type": "line", "p1": "t7", "p2": "t8" },
+    { "id": "k4", "type": "arc", "c": "m4", "s": "t8", "e": "t1", "r": 10, "a0": 3.141592653589793, "a1": 4.71238898038469 }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e2",
+   "type": "extrude",
+   "name": "Platte 2",
+   "sketch": "s2",
+   "distance": 20,
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "f2",
+   "type": "fillet",
+   "name": "andere Kante der Kette – gleiches Ergebnis",
+   "all": false,
+   "radius": 5,
+   "edges": [{ "t": "LINE", "p": [130, 40, 20], "d": [1, 0, 0] }]
+  },
+  {
+   "id": "s3",
+   "type": "sketch",
+   "name": "Winkel mit Fuß",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [0, 0, 0],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "t1", "x": 200, "y": 0 },
+    { "id": "t2", "x": 260, "y": 0 },
+    { "id": "t3", "x": 260, "y": 8 },
+    { "id": "t4", "x": 208, "y": 8 },
+    { "id": "t5", "x": 208, "y": 60 },
+    { "id": "t6", "x": 200, "y": 60 }
+   ],
+   "curves": [
+    { "id": "l1", "type": "line", "p1": "t1", "p2": "t2" },
+    { "id": "l2", "type": "line", "p1": "t2", "p2": "t3" },
+    { "id": "l3", "type": "line", "p1": "t3", "p2": "t4" },
+    { "id": "l4", "type": "line", "p1": "t4", "p2": "t5" },
+    { "id": "l5", "type": "line", "p1": "t5", "p2": "t6" },
+    { "id": "l6", "type": "line", "p1": "t6", "p2": "t1" }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e3",
+   "type": "extrude",
+   "name": "Winkel",
+   "sketch": "s3",
+   "distance": 20,
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "c1",
+   "type": "chamfer",
+   "name": "Fuß gefast – Kette endet an den 90°-Ecken",
+   "all": false,
+   "ctype": "two",
+   "distance": 2,
+   "distance2": 4,
+   "edges": [{ "t": "LINE", "p": [230, 0, 0], "d": [1, 0, 0] }]
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

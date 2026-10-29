@@ -1,0 +1,14 @@
+{
+  "format": 2,
+  "app": "cantcodecad",
+  "name": "Lochbild auf 500 mm",
+  "units": "mm",
+  "features": [
+    { "id": "q1", "type": "primitive", "name": "Platte", "kind": "box", "plane": { "kind": "origin", "key": "XY" }, "cx": 0, "cy": 0, "w": 500, "l": 200, "h": 8, "d": 20, "d2": 6, "flip": false, "op": "new" },
+    { "id": "lo", "type": "primitive", "name": "Loch", "kind": "cylinder", "plane": { "kind": "origin", "key": "XY" }, "cx": 0, "cy": 0, "w": 20, "l": 20, "h": 8, "d": 11, "d2": 6, "flip": false, "op": "cut" },
+    { "id": "lk", "type": "pattern", "name": "Lochbild", "features": ["lo"], "kind": "linear", "axis": "X", "count": 5, "dist": "extent", "extent": 460, "sym": true, "axisRef": { "o": [-250, -100, 0], "d": [1, 0, 0], "label": "Gerade Kante" }, "two": true, "axis2": "Y", "count2": 3, "dist2": "extent", "extent2": 120, "sym2": true, "axis2Ref": { "o": [-250, -100, 0], "d": [0, 1, 0], "label": "Gerade Kante" } }
+  ],
+  "bodies": {},
+  "components": [],
+  "inserts": []
+}

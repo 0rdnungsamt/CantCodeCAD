@@ -1,0 +1,82 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Extrusion zwei Seiten und Startversatz",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Steg",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [0, 0, 0],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "a", "x": -20, "y": -15 },
+    { "id": "b", "x": 20, "y": -15 },
+    { "id": "c", "x": 20, "y": 15 },
+    { "id": "d", "x": -20, "y": 15 }
+   ],
+   "curves": [
+    { "id": "l1", "type": "line", "p1": "a", "p2": "b" },
+    { "id": "l2", "type": "line", "p1": "b", "p2": "c" },
+    { "id": "l3", "type": "line", "p1": "c", "p2": "d" },
+    { "id": "l4", "type": "line", "p1": "d", "p2": "a" }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Steg",
+   "sketch": "s1",
+   "distance": 6,
+   "direction": "two",
+   "dist2": 3,
+   "taper": -10,
+   "taper2": 0,
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Bund",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [0, 0, 0],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "c", "x": 0, "y": 60 }
+   ],
+   "curves": [
+    { "id": "k", "type": "circle", "c": "c", "r": 10 }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e2",
+   "type": "extrude",
+   "name": "Bund",
+   "sketch": "s2",
+   "distance": 10,
+   "direction": "normal",
+   "start": "offset",
+   "startOffset": 5,
+   "op": "new",
+   "profiles": null
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

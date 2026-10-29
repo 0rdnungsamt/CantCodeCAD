@@ -1,0 +1,221 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Stumpfstoß HV-Naht",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Blech A",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "b",
+     "x": 60,
+     "y": 0
+    },
+    {
+     "id": "c",
+     "x": 60,
+     "y": 40
+    },
+    {
+     "id": "d",
+     "x": 0,
+     "y": 40
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Blech A",
+   "sketch": "s1",
+   "distance": 10,
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Blech B",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 60,
+     "y": 0
+    },
+    {
+     "id": "b",
+     "x": 120,
+     "y": 0
+    },
+    {
+     "id": "c",
+     "x": 120,
+     "y": 40
+    },
+    {
+     "id": "d",
+     "x": 60,
+     "y": 40
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e2",
+   "type": "extrude",
+   "name": "Blech B",
+   "sketch": "s2",
+   "distance": 10,
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "w1",
+   "type": "weld",
+   "name": "HV-Naht",
+   "a": 8,
+   "kind": "hv",
+   "allAround": false,
+   "edges": [
+    {
+     "t": "LINE",
+     "p": [
+      60,
+      20,
+      10
+     ],
+     "d": [
+      0,
+      1,
+      0
+     ]
+    }
+   ]
+  }
+ ],
+ "bodies": {
+  "e1": {
+   "name": "Blech A",
+   "hidden": false
+  },
+  "e2": {
+   "name": "Blech B",
+   "hidden": false
+  },
+  "w1": {
+   "name": "HV-Naht",
+   "hidden": false
+  }
+ },
+ "components": [],
+ "inserts": []
+}

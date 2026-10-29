@@ -1,0 +1,597 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Winkel mit Rippe verschraubt",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Profil",
+   "plane": {
+    "key": "XZ",
+    "label": "XZ · Vorderansicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "p0",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "p1",
+     "x": 80,
+     "y": 0
+    },
+    {
+     "id": "p2",
+     "x": 80,
+     "y": 8
+    },
+    {
+     "id": "p3",
+     "x": 8,
+     "y": 8
+    },
+    {
+     "id": "p4",
+     "x": 8,
+     "y": 60
+    },
+    {
+     "id": "p5",
+     "x": 0,
+     "y": 60
+    }
+   ],
+   "curves": [
+    {
+     "id": "l0",
+     "type": "line",
+     "p1": "p0",
+     "p2": "p1"
+    },
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "p1",
+     "p2": "p2"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "p2",
+     "p2": "p3"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "p3",
+     "p2": "p4"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "p4",
+     "p2": "p5"
+    },
+    {
+     "id": "l5",
+     "type": "line",
+     "p1": "p5",
+     "p2": "p0"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Winkel",
+   "sketch": "s1",
+   "distance": 50,
+   "direction": "reverse",
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Bohrbild",
+   "plane": {
+    "key": "FACE",
+    "label": "Fläche",
+    "o": [
+     0,
+     0,
+     8
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 35,
+     "y": 12
+    },
+    {
+     "id": "b",
+     "x": 65,
+     "y": 12
+    },
+    {
+     "id": "c",
+     "x": 35,
+     "y": 38
+    },
+    {
+     "id": "d",
+     "x": 65,
+     "y": 38
+    }
+   ],
+   "curves": [],
+   "rules": []
+  },
+  {
+   "id": "h1",
+   "type": "hole",
+   "name": "Bohrungen",
+   "sketch": "s2",
+   "kind": "simple",
+   "preset": "clear:M8",
+   "d": 9,
+   "depthMode": "through",
+   "depth": 10,
+   "tip": "drill",
+   "flip": false
+  },
+  {
+   "id": "sr",
+   "type": "sketch",
+   "name": "Rippenlinie",
+   "plane": {
+    "key": "XZ",
+    "label": "XZ · Mitte (y = 25)",
+    "o": [
+     0,
+     25,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "r1",
+     "x": 8,
+     "y": 40
+    },
+    {
+     "id": "r2",
+     "x": 40,
+     "y": 8
+    }
+   ],
+   "curves": [
+    {
+     "id": "rl",
+     "type": "line",
+     "p1": "r1",
+     "p2": "r2"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "rb",
+   "type": "rib",
+   "name": "Rippe",
+   "sketch": "sr",
+   "thickness": 4,
+   "flip": false,
+   "suppressed": false
+  },
+  {
+   "id": "fs1",
+   "type": "fastener",
+   "name": "ISO 4762 M8 × 30",
+   "kind": "iso4762",
+   "size": "M8",
+   "length": 30,
+   "edge": {
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      30.5,
+      38,
+      8
+     ]
+    },
+    "body": "e1"
+   },
+   "px": 0,
+   "py": 0,
+   "pz": 0,
+   "offset": 0,
+   "flip": false,
+   "autoName": true
+  },
+  {
+   "id": "fw1",
+   "type": "fastener",
+   "name": "ISO 7089 M8",
+   "kind": "iso7089",
+   "size": "M8",
+   "length": 25,
+   "edge": {
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      30.5,
+      38,
+      0
+     ]
+    },
+    "body": "e1"
+   },
+   "px": 0,
+   "py": 0,
+   "pz": 0,
+   "offset": 0,
+   "flip": false,
+   "autoName": true
+  },
+  {
+   "id": "fn1",
+   "type": "fastener",
+   "name": "ISO 4032 M8",
+   "kind": "iso4032",
+   "size": "M8",
+   "length": 25,
+   "edge": {
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      30.5,
+      38,
+      0
+     ]
+    },
+    "body": "e1"
+   },
+   "px": 0,
+   "py": 0,
+   "pz": 0,
+   "offset": 1.6,
+   "flip": false,
+   "autoName": true
+  },
+  {
+   "id": "fs2",
+   "type": "fastener",
+   "name": "ISO 4762 M8 × 30",
+   "kind": "iso4762",
+   "size": "M8",
+   "length": 30,
+   "edge": {
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      60.5,
+      38,
+      8
+     ]
+    },
+    "body": "e1"
+   },
+   "px": 0,
+   "py": 0,
+   "pz": 0,
+   "offset": 0,
+   "flip": false,
+   "autoName": true
+  },
+  {
+   "id": "fw2",
+   "type": "fastener",
+   "name": "ISO 7089 M8",
+   "kind": "iso7089",
+   "size": "M8",
+   "length": 25,
+   "edge": {
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      60.5,
+      38,
+      0
+     ]
+    },
+    "body": "e1"
+   },
+   "px": 0,
+   "py": 0,
+   "pz": 0,
+   "offset": 0,
+   "flip": false,
+   "autoName": true
+  },
+  {
+   "id": "fn2",
+   "type": "fastener",
+   "name": "ISO 4032 M8",
+   "kind": "iso4032",
+   "size": "M8",
+   "length": 25,
+   "edge": {
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      60.5,
+      38,
+      0
+     ]
+    },
+    "body": "e1"
+   },
+   "px": 0,
+   "py": 0,
+   "pz": 0,
+   "offset": 1.6,
+   "flip": false,
+   "autoName": true
+  },
+  {
+   "id": "fs3",
+   "type": "fastener",
+   "name": "ISO 4762 M8 × 30",
+   "kind": "iso4762",
+   "size": "M8",
+   "length": 30,
+   "edge": {
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      30.5,
+      12,
+      8
+     ]
+    },
+    "body": "e1"
+   },
+   "px": 0,
+   "py": 0,
+   "pz": 0,
+   "offset": 0,
+   "flip": false,
+   "autoName": true
+  },
+  {
+   "id": "fw3",
+   "type": "fastener",
+   "name": "ISO 7089 M8",
+   "kind": "iso7089",
+   "size": "M8",
+   "length": 25,
+   "edge": {
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      30.5,
+      12,
+      0
+     ]
+    },
+    "body": "e1"
+   },
+   "px": 0,
+   "py": 0,
+   "pz": 0,
+   "offset": 0,
+   "flip": false,
+   "autoName": true
+  },
+  {
+   "id": "fn3",
+   "type": "fastener",
+   "name": "ISO 4032 M8",
+   "kind": "iso4032",
+   "size": "M8",
+   "length": 25,
+   "edge": {
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      30.5,
+      12,
+      0
+     ]
+    },
+    "body": "e1"
+   },
+   "px": 0,
+   "py": 0,
+   "pz": 0,
+   "offset": 1.6,
+   "flip": false,
+   "autoName": true
+  },
+  {
+   "id": "fs4",
+   "type": "fastener",
+   "name": "ISO 4762 M8 × 30",
+   "kind": "iso4762",
+   "size": "M8",
+   "length": 30,
+   "edge": {
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      60.5,
+      12,
+      8
+     ]
+    },
+    "body": "e1"
+   },
+   "px": 0,
+   "py": 0,
+   "pz": 0,
+   "offset": 0,
+   "flip": false,
+   "autoName": true
+  },
+  {
+   "id": "fw4",
+   "type": "fastener",
+   "name": "ISO 7089 M8",
+   "kind": "iso7089",
+   "size": "M8",
+   "length": 25,
+   "edge": {
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      60.5,
+      12,
+      0
+     ]
+    },
+    "body": "e1"
+   },
+   "px": 0,
+   "py": 0,
+   "pz": 0,
+   "offset": 0,
+   "flip": false,
+   "autoName": true
+  },
+  {
+   "id": "fn4",
+   "type": "fastener",
+   "name": "ISO 4032 M8",
+   "kind": "iso4032",
+   "size": "M8",
+   "length": 25,
+   "edge": {
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      60.5,
+      12,
+      0
+     ]
+    },
+    "body": "e1"
+   },
+   "px": 0,
+   "py": 0,
+   "pz": 0,
+   "offset": 1.6,
+   "flip": false,
+   "autoName": true
+  }
+ ],
+ "bodies": {
+  "e1": {
+   "name": "Winkel",
+   "hidden": false,
+   "material": "steel",
+   "color": ""
+  }
+ },
+ "components": [],
+ "inserts": [],
+ "drawing": {
+  "opts": {
+   "format": "A4",
+   "scale": "auto",
+   "hidden": true,
+   "iso": true,
+   "dims": true,
+   "centers": true,
+   "holes": true,
+   "section": false,
+   "bom": true,
+   "cutX": ""
+  },
+  "dims": [
+   {
+    "id": "0sm14d33by",
+    "view": "top",
+    "a": [
+     35,
+     12
+    ],
+    "b": [
+     35,
+     38
+    ],
+    "dir": "v",
+    "at": -15.793923140799537
+   },
+   {
+    "id": "jlnaz7ag5l",
+    "view": "top",
+    "a": [
+     35,
+     12
+    ],
+    "b": [
+     65,
+     12
+    ],
+    "dir": "h",
+    "at": -11.910551723339438
+   }
+  ]
+ }
+}

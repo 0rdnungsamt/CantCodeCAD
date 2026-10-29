@@ -1,0 +1,587 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Tischgestell geschweißt",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Rahmen oben",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "b",
+     "x": 800,
+     "y": 0
+    },
+    {
+     "id": "c",
+     "x": 800,
+     "y": 500
+    },
+    {
+     "id": "d",
+     "x": 0,
+     "y": 500
+    },
+    {
+     "id": "e",
+     "x": 400,
+     "y": 0
+    },
+    {
+     "id": "f",
+     "x": 400,
+     "y": 500
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    },
+    {
+     "id": "l5",
+     "type": "line",
+     "p1": "e",
+     "p2": "f"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Beine vorne",
+   "plane": {
+    "key": "XZ",
+    "label": "XZ · Vorderansicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "g",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "h",
+     "x": 0,
+     "y": -740
+    },
+    {
+     "id": "i",
+     "x": 800,
+     "y": 0
+    },
+    {
+     "id": "j",
+     "x": 800,
+     "y": -740
+    }
+   ],
+   "curves": [
+    {
+     "id": "m1",
+     "type": "line",
+     "p1": "g",
+     "p2": "h"
+    },
+    {
+     "id": "m2",
+     "type": "line",
+     "p1": "i",
+     "p2": "j"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s3",
+   "type": "sketch",
+   "name": "Beine hinten",
+   "plane": {
+    "key": "XZ",
+    "label": "XZ · hinten (y = 500)",
+    "o": [
+     0,
+     500,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "g",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "h",
+     "x": 0,
+     "y": -740
+    },
+    {
+     "id": "i",
+     "x": 800,
+     "y": 0
+    },
+    {
+     "id": "j",
+     "x": 800,
+     "y": -740
+    }
+   ],
+   "curves": [
+    {
+     "id": "m1",
+     "type": "line",
+     "p1": "g",
+     "p2": "h"
+    },
+    {
+     "id": "m2",
+     "type": "line",
+     "p1": "i",
+     "p2": "j"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "f1",
+   "type": "frame",
+   "name": "Gestell",
+   "sketch": "s1",
+   "kind": "square",
+   "size": "",
+   "w": 40,
+   "h": 40,
+   "t": 3,
+   "corners": "miter",
+   "rot": 0,
+   "exprs": {
+    "w": {
+     "e": "rohr",
+     "v": 40
+    },
+    "t": {
+     "e": "wand",
+     "v": 3
+    }
+   },
+   "sketches": [
+    "s2",
+    "s3"
+   ],
+   "alignY": "top",
+   "alignX": "inside"
+  },
+  {
+   "id": "w1",
+   "type": "weld",
+   "name": "Schweißnaht Beine",
+   "a": 3,
+   "edges": [
+    {
+     "t": "LINE",
+     "p": [
+      20,
+      40,
+      -40
+     ],
+     "d": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      0,
+      20,
+      -40
+     ],
+     "d": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      20,
+      0,
+      -40
+     ],
+     "d": [
+      -1,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      40,
+      20,
+      -40
+     ],
+     "d": [
+      0,
+      -1,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      780,
+      40,
+      -40
+     ],
+     "d": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      760,
+      20,
+      -40
+     ],
+     "d": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      780,
+      0,
+      -40
+     ],
+     "d": [
+      -1,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      800,
+      20,
+      -40
+     ],
+     "d": [
+      0,
+      -1,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      20,
+      500,
+      -40
+     ],
+     "d": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      0,
+      480,
+      -40
+     ],
+     "d": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      20,
+      460,
+      -40
+     ],
+     "d": [
+      -1,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      40,
+      480,
+      -40
+     ],
+     "d": [
+      0,
+      -1,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      780,
+      500,
+      -40
+     ],
+     "d": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      760,
+      480,
+      -40
+     ],
+     "d": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      780,
+      460,
+      -40
+     ],
+     "d": [
+      -1,
+      0,
+      0
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      800,
+      480,
+      -40
+     ],
+     "d": [
+      0,
+      -1,
+      0
+     ]
+    }
+   ],
+   "allAround": true
+  },
+  {
+   "id": "w2",
+   "type": "weld",
+   "name": "Schweißnaht Traverse",
+   "a": 3,
+   "allAround": true,
+   "edges": [
+    {
+     "t": "LINE",
+     "p": [
+      360,
+      40,
+      -20
+     ],
+     "d": [
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "t": "LINE",
+     "p": [
+      360,
+      460,
+      -20
+     ],
+     "d": [
+      0,
+      0,
+      1
+     ]
+    }
+   ]
+  }
+ ],
+ "bodies": {
+  "f1:0": {
+   "name": "Stab 1",
+   "hidden": false,
+   "material": "steel",
+   "color": ""
+  },
+  "f1:1": {
+   "name": "Stab 2",
+   "hidden": false,
+   "material": "steel",
+   "color": ""
+  },
+  "f1:2": {
+   "name": "Stab 3",
+   "hidden": false,
+   "material": "steel",
+   "color": ""
+  },
+  "f1:3": {
+   "name": "Stab 4",
+   "hidden": false,
+   "material": "steel",
+   "color": ""
+  },
+  "f1:4": {
+   "name": "Stab 5",
+   "hidden": false,
+   "material": "steel",
+   "color": ""
+  },
+  "f1:5": {
+   "name": "Stab 6",
+   "hidden": false,
+   "material": "steel",
+   "color": ""
+  },
+  "f1:6": {
+   "name": "Stab 7",
+   "hidden": false,
+   "material": "steel",
+   "color": ""
+  },
+  "f1:7": {
+   "name": "Stab 8",
+   "hidden": false,
+   "material": "steel",
+   "color": ""
+  },
+  "f1:8": {
+   "name": "Stab 9",
+   "hidden": false,
+   "material": "steel",
+   "color": ""
+  }
+ },
+ "components": [],
+ "inserts": [],
+ "params": [
+  {
+   "id": "pr",
+   "name": "rohr",
+   "expr": "40",
+   "comment": "Vierkantrohr Außenmaß"
+  },
+  {
+   "id": "pw",
+   "name": "wand",
+   "expr": "3",
+   "comment": "Wandstärke"
+  }
+ ]
+}

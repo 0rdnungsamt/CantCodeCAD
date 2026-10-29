@@ -1,0 +1,239 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Winkel 80x60x8",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Profil",
+   "plane": {
+    "key": "XZ",
+    "label": "XZ · Vorderansicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "p0",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "p1",
+     "x": 80,
+     "y": 0
+    },
+    {
+     "id": "p2",
+     "x": 80,
+     "y": 8
+    },
+    {
+     "id": "p3",
+     "x": 8,
+     "y": 8
+    },
+    {
+     "id": "p4",
+     "x": 8,
+     "y": 60
+    },
+    {
+     "id": "p5",
+     "x": 0,
+     "y": 60
+    }
+   ],
+   "curves": [
+    {
+     "id": "l0",
+     "type": "line",
+     "p1": "p0",
+     "p2": "p1"
+    },
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "p1",
+     "p2": "p2"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "p2",
+     "p2": "p3"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "p3",
+     "p2": "p4"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "p4",
+     "p2": "p5"
+    },
+    {
+     "id": "l5",
+     "type": "line",
+     "p1": "p5",
+     "p2": "p0"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Winkel",
+   "sketch": "s1",
+   "distance": 50,
+   "direction": "reverse",
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Bohrbild",
+   "plane": {
+    "key": "FACE",
+    "label": "Fläche",
+    "o": [
+     0,
+     0,
+     8
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 35,
+     "y": 12
+    },
+    {
+     "id": "b",
+     "x": 65,
+     "y": 12
+    },
+    {
+     "id": "c",
+     "x": 35,
+     "y": 38
+    },
+    {
+     "id": "d",
+     "x": 65,
+     "y": 38
+    }
+   ],
+   "curves": [],
+   "rules": []
+  },
+  {
+   "id": "h1",
+   "type": "hole",
+   "name": "Bohrungen",
+   "sketch": "s2",
+   "kind": "simple",
+   "preset": "clear:M8",
+   "d": 9,
+   "depthMode": "through",
+   "depth": 10,
+   "tip": "drill",
+   "flip": false
+  }
+ ],
+ "bodies": {
+  "e1": {
+   "name": "Winkel",
+   "hidden": false,
+   "material": "steel",
+   "color": ""
+  }
+ },
+ "components": [],
+ "inserts": [],
+ "file": "Beispiele/Winkel 80x60x8.cantcodecad",
+ "drawing": {
+  "opts": {
+   "format": "A4",
+   "scale": "auto",
+   "hidden": true,
+   "iso": true,
+   "dims": true,
+   "centers": true,
+   "holes": true,
+   "section": false,
+   "bom": true,
+   "cutX": ""
+  },
+  "dims": [
+   {
+    "id": "0sm14d33by",
+    "view": "top",
+    "a": [
+     35,
+     12
+    ],
+    "b": [
+     35,
+     38
+    ],
+    "dir": "v",
+    "at": -15.793923140799537
+   },
+   {
+    "id": "jlnaz7ag5l",
+    "view": "top",
+    "a": [
+     35,
+     12
+    ],
+    "b": [
+     65,
+     12
+    ],
+    "dir": "h",
+    "at": -11.910551723339438
+   }
+  ]
+ }
+}

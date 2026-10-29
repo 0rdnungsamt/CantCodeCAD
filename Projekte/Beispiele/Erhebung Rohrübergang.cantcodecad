@@ -1,0 +1,130 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Erhebung Rohrübergang",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Rohr ⌀20 × 2",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 10
+    },
+    {
+     "id": "k2",
+     "type": "circle",
+     "c": "m",
+     "r": 8
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Rohr ⌀40 × 4",
+   "plane": {
+    "key": "FACE",
+    "label": "Ebene z = 50",
+    "o": [
+     0,
+     0,
+     50
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 20
+    },
+    {
+     "id": "k2",
+     "type": "circle",
+     "c": "m",
+     "r": 16
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "loft",
+   "name": "Übergang",
+   "sections": [
+    {
+     "sketch": "s1",
+     "profile": null
+    },
+    {
+     "sketch": "s2",
+     "profile": null
+    }
+   ],
+   "ruled": false,
+   "op": "new"
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

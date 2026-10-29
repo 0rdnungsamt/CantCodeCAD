@@ -1,0 +1,205 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Kasten Blech geschlossen 2mm",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Umriss",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "b",
+     "x": 100,
+     "y": 0
+    },
+    {
+     "id": "c",
+     "x": 100,
+     "y": 60
+    },
+    {
+     "id": "d",
+     "x": 0,
+     "y": 60
+    },
+    {
+     "id": "h1",
+     "x": 25,
+     "y": 30
+    },
+    {
+     "id": "h2",
+     "x": 75,
+     "y": 30
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    },
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "h1",
+     "r": 4
+    },
+    {
+     "id": "k2",
+     "type": "circle",
+     "c": "h2",
+     "r": 4
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "b1",
+   "type": "sm_base",
+   "name": "Lasche1",
+   "sketch": "s1",
+   "profiles": null,
+   "flip": false,
+   "op": "new"
+  },
+  {
+   "id": "f1",
+   "type": "sm_flange",
+   "name": "Wände",
+   "edges": [
+    {
+     "ref": {
+      "t": "LINE",
+      "p": [
+       50,
+       0,
+       2
+      ],
+      "d": [
+       1,
+       0,
+       0
+      ]
+     },
+     "body": "b1"
+    },
+    {
+     "ref": {
+      "t": "LINE",
+      "p": [
+       100,
+       30,
+       2
+      ],
+      "d": [
+       0,
+       1,
+       0
+      ]
+     },
+     "body": "b1"
+    },
+    {
+     "ref": {
+      "t": "LINE",
+      "p": [
+       50,
+       60,
+       2
+      ],
+      "d": [
+       -1,
+       0,
+       0
+      ]
+     },
+     "body": "b1"
+    },
+    {
+     "ref": {
+      "t": "LINE",
+      "p": [
+       0,
+       30,
+       2
+      ],
+      "d": [
+       0,
+       -1,
+       0
+      ]
+     },
+     "body": "b1"
+    }
+   ],
+   "height": 30,
+   "angle": 90,
+   "flip": false,
+   "corners": "closed"
+  }
+ ],
+ "bodies": {
+  "b1": {
+   "name": "Körper1",
+   "hidden": false
+  }
+ },
+ "components": [],
+ "inserts": [],
+ "sheet": {
+  "t": 2,
+  "r": 2,
+  "k": 0.44
+ }
+}

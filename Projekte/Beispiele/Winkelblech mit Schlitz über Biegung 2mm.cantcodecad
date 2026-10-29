@@ -1,0 +1,296 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Winkelblech mit Schlitz über Biegung",
+ "units": "mm",
+ "sheet": {
+  "t": 2,
+  "r": 2,
+  "k": 0.44
+ },
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Zuschnitt",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "b",
+     "x": 100,
+     "y": 0
+    },
+    {
+     "id": "c",
+     "x": 100,
+     "y": 60
+    },
+    {
+     "id": "d",
+     "x": 0,
+     "y": 60
+    },
+    {
+     "id": "h1",
+     "x": 20,
+     "y": 30
+    },
+    {
+     "id": "h2",
+     "x": 75,
+     "y": 30
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    },
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "h1",
+     "r": 3.3
+    },
+    {
+     "id": "k2",
+     "type": "circle",
+     "c": "h2",
+     "r": 3.3
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "b1",
+   "type": "sm_base",
+   "name": "Blech",
+   "sketch": "s1",
+   "profiles": null,
+   "flip": false,
+   "op": "new"
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Biegelinie",
+   "plane": {
+    "key": "FACE",
+    "label": "Fläche des Körpers",
+    "o": [
+     0,
+     0,
+     2
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "e",
+     "x": 50,
+     "y": 0
+    },
+    {
+     "id": "f",
+     "x": 50,
+     "y": 60
+    }
+   ],
+   "curves": [
+    {
+     "id": "m1",
+     "type": "line",
+     "p1": "e",
+     "p2": "f"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "g1",
+   "type": "sm_bend",
+   "name": "Biegen",
+   "sketch": "s2",
+   "angle": 90,
+   "flip": false,
+   "side": false
+  },
+  {
+   "id": "u1",
+   "type": "sm_unfold",
+   "name": "Abwickeln",
+   "face": {
+    "t": "PLANE",
+    "n": [
+     0,
+     0,
+     -1
+    ],
+    "dist": 0,
+    "p": [
+     75,
+     30,
+     0
+    ]
+   },
+   "faceBody": "b1"
+  },
+  {
+   "id": "s3",
+   "type": "sketch",
+   "name": "Schlitz",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "q1",
+     "x": 40,
+     "y": 25
+    },
+    {
+     "id": "q2",
+     "x": 60,
+     "y": 25
+    },
+    {
+     "id": "q3",
+     "x": 60,
+     "y": 35
+    },
+    {
+     "id": "q4",
+     "x": 40,
+     "y": 35
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "line",
+     "p1": "q1",
+     "p2": "q2"
+    },
+    {
+     "id": "k2",
+     "type": "line",
+     "p1": "q2",
+     "p2": "q3"
+    },
+    {
+     "id": "k3",
+     "type": "line",
+     "p1": "q3",
+     "p2": "q4"
+    },
+    {
+     "id": "k4",
+     "type": "line",
+     "p1": "q4",
+     "p2": "q1"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "x1",
+   "type": "extrude",
+   "name": "Schlitz schneiden",
+   "sketch": "s3",
+   "distance": 5,
+   "op": "cut",
+   "profiles": null
+  },
+  {
+   "id": "r1",
+   "type": "sm_refold",
+   "name": "Zurückfalten"
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

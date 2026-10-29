@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>cantcodecad Symbole</title>
+<link rel="stylesheet" href="../src/styles.css">
+<style>
+  body { margin: 0; padding: 16px; background: #fff; font: 12px system-ui, sans-serif; overflow: auto; height: auto; }
+  h1 { font-size: 16px; margin: 0 0 4px; }
+  p { margin: 0 0 12px; color: #555; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 6px; }
+  .cell { display: flex; align-items: center; gap: 6px; padding: 6px; border: 1px solid #e3e7ec; border-radius: 6px; }
+  .cell span { font-size: 10.5px; color: #333; word-break: break-all; }
+  .big { color: #1f63c9; }
+</style>
+</head>
+<body>
+<h1>Symbole</h1>
+<p>Je Symbol: Menüband (30 px), Menü (18 px), Browser (15 px). Ohne Klasse gezeichnete Linien folgen der Gruppenfarbe (hier blau).</p>
+<div class="grid" id="g"></div>
+<script type="module">
+  import { icon, ICON_NAMES } from '../src/icons.js';
+  document.getElementById('g').innerHTML = ICON_NAMES.map(n => `<div class="cell" title="${n}"><span class="big">${icon(n, 30)}</span>${icon(n, 18)}${icon(n, 15)}<span>${n}</span></div>`).join('');
+</script>
+</body>
+</html>

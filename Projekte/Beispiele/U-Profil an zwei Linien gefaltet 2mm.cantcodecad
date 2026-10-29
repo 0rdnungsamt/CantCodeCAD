@@ -1,0 +1,178 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "U-Profil an zwei Linien gefaltet",
+ "units": "mm",
+ "sheet": {
+  "t": 2,
+  "r": 2,
+  "k": 0.44
+ },
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Zuschnitt",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "b",
+     "x": 100,
+     "y": 0
+    },
+    {
+     "id": "c",
+     "x": 100,
+     "y": 60
+    },
+    {
+     "id": "d",
+     "x": 0,
+     "y": 60
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "b1",
+   "type": "sm_base",
+   "name": "Blech",
+   "sketch": "s1",
+   "profiles": null,
+   "flip": false,
+   "op": "new"
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Zwei Biegelinien",
+   "plane": {
+    "key": "FACE",
+    "label": "Fläche des Körpers",
+    "o": [
+     0,
+     0,
+     2
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "e",
+     "x": 30,
+     "y": 0
+    },
+    {
+     "id": "f",
+     "x": 30,
+     "y": 60
+    },
+    {
+     "id": "g",
+     "x": 70,
+     "y": 0
+    },
+    {
+     "id": "h",
+     "x": 70,
+     "y": 60
+    }
+   ],
+   "curves": [
+    {
+     "id": "m1",
+     "type": "line",
+     "p1": "e",
+     "p2": "f"
+    },
+    {
+     "id": "m2",
+     "type": "line",
+     "p1": "g",
+     "p2": "h"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "g1",
+   "type": "sm_bend",
+   "name": "Falten",
+   "sketch": "s2",
+   "angle": 90,
+   "flip": false,
+   "side": false
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

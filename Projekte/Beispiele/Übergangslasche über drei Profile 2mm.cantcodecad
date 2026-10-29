@@ -1,0 +1,523 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Übergangslasche über drei Profile",
+ "units": "mm",
+ "sheet": {
+  "t": 2,
+  "r": 2,
+  "k": 0.44
+ },
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Unten",
+   "plane": {
+    "key": "XY",
+    "label": "Ebene z = 0",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": -20,
+     "y": -20
+    },
+    {
+     "id": "b",
+     "x": 20,
+     "y": -20
+    },
+    {
+     "id": "c",
+     "x": 20,
+     "y": 20
+    },
+    {
+     "id": "d",
+     "x": -20,
+     "y": 20
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Mitte",
+   "plane": {
+    "key": "FACE",
+    "label": "Ebene z = 50",
+    "o": [
+     0,
+     0,
+     50
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": -20,
+     "y": -20
+    },
+    {
+     "id": "b",
+     "x": 20,
+     "y": -20
+    },
+    {
+     "id": "c",
+     "x": 20,
+     "y": 20
+    },
+    {
+     "id": "d",
+     "x": -20,
+     "y": 20
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s3",
+   "type": "sketch",
+   "name": "Oben",
+   "plane": {
+    "key": "FACE",
+    "label": "Ebene z = 100",
+    "o": [
+     0,
+     0,
+     100
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": -20,
+     "y": -20
+    },
+    {
+     "id": "b",
+     "x": 20,
+     "y": -20
+    },
+    {
+     "id": "c",
+     "x": 20,
+     "y": 20
+    },
+    {
+     "id": "d",
+     "x": -20,
+     "y": 20
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s4",
+   "type": "sketch",
+   "name": "Trichter unten",
+   "plane": {
+    "key": "XY",
+    "label": "Ebene z = 0",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 130,
+     "y": -20
+    },
+    {
+     "id": "b",
+     "x": 170,
+     "y": -20
+    },
+    {
+     "id": "c",
+     "x": 170,
+     "y": 20
+    },
+    {
+     "id": "d",
+     "x": 130,
+     "y": 20
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s5",
+   "type": "sketch",
+   "name": "Trichter Mitte",
+   "plane": {
+    "key": "FACE",
+    "label": "Ebene z = 50",
+    "o": [
+     0,
+     0,
+     50
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 120,
+     "y": -30
+    },
+    {
+     "id": "b",
+     "x": 180,
+     "y": -30
+    },
+    {
+     "id": "c",
+     "x": 180,
+     "y": 30
+    },
+    {
+     "id": "d",
+     "x": 120,
+     "y": 30
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s6",
+   "type": "sketch",
+   "name": "Trichter oben",
+   "plane": {
+    "key": "FACE",
+    "label": "Ebene z = 100",
+    "o": [
+     0,
+     0,
+     100
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 110,
+     "y": -40
+    },
+    {
+     "id": "b",
+     "x": 190,
+     "y": -40
+    },
+    {
+     "id": "c",
+     "x": 190,
+     "y": 40
+    },
+    {
+     "id": "d",
+     "x": 110,
+     "y": 40
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "t2",
+   "type": "sm_loft",
+   "name": "Trichter drei Profile",
+   "skA": "s4",
+   "skB": "s5",
+   "more": [
+    "s6"
+   ],
+   "side": "out",
+   "mode": "brake",
+   "facets": 4,
+   "op": "new"
+  },
+  {
+   "id": "t3",
+   "type": "sm_loft",
+   "name": "Trichter zwei Profile",
+   "skA": "s4",
+   "skB": "s6",
+   "side": "out",
+   "mode": "brake",
+   "facets": 4,
+   "op": "new"
+  },
+  {
+   "id": "t1",
+   "type": "sm_loft",
+   "name": "Übergang",
+   "skA": "s1",
+   "skB": "s2",
+   "more": [
+    "s3"
+   ],
+   "side": "out",
+   "mode": "brake",
+   "facets": 4,
+   "op": "new"
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

@@ -1,0 +1,147 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Extrusion Start von einer Fläche",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Grundblock",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [0, 0, 0],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "a", "x": -20, "y": -15 },
+    { "id": "b", "x": 20, "y": -15 },
+    { "id": "c", "x": 20, "y": 15 },
+    { "id": "d", "x": -20, "y": 15 }
+   ],
+   "curves": [
+    { "id": "l1", "type": "line", "p1": "a", "p2": "b" },
+    { "id": "l2", "type": "line", "p1": "b", "p2": "c" },
+    { "id": "l3", "type": "line", "p1": "c", "p2": "d" },
+    { "id": "l4", "type": "line", "p1": "d", "p2": "a" }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Grundblock",
+   "sketch": "s1",
+   "distance": 12,
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Bund auf Oberseite",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [0, 0, 0],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "c", "x": 0, "y": 45 }
+   ],
+   "curves": [
+    { "id": "k", "type": "circle", "c": "c", "r": 5 }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e2",
+   "type": "extrude",
+   "name": "Bund auf Oberseite",
+   "sketch": "s2",
+   "distance": 10,
+   "start": "object",
+   "startRef": { "t": "PLANE", "n": [0, 0, 1], "dist": 12, "p": [0, 0, 12] },
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "s3",
+   "type": "sketch",
+   "name": "Ansatz mit Versatz",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [0, 0, 0],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "a", "x": 40, "y": 30 },
+    { "id": "b", "x": 50, "y": 30 },
+    { "id": "c", "x": 50, "y": 40 },
+    { "id": "d", "x": 40, "y": 40 }
+   ],
+   "curves": [
+    { "id": "l1", "type": "line", "p1": "a", "p2": "b" },
+    { "id": "l2", "type": "line", "p1": "b", "p2": "c" },
+    { "id": "l3", "type": "line", "p1": "c", "p2": "d" },
+    { "id": "l4", "type": "line", "p1": "d", "p2": "a" }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e3",
+   "type": "extrude",
+   "name": "Ansatz mit Versatz",
+   "sketch": "s3",
+   "distance": 10,
+   "start": "object",
+   "startOffset": -4,
+   "startRef": { "t": "PLANE", "n": [0, 0, 1], "dist": 12, "p": [0, 0, 12] },
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "s4",
+   "type": "sketch",
+   "name": "Zapfen nach unten",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [0, 0, 0],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "c", "x": -40, "y": 0 }
+   ],
+   "curves": [
+    { "id": "k", "type": "circle", "c": "c", "r": 3 }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e4",
+   "type": "extrude",
+   "name": "Zapfen nach unten",
+   "sketch": "s4",
+   "distance": 5,
+   "direction": "reverse",
+   "start": "object",
+   "startRef": { "t": "PLANE", "n": [0, 0, 1], "dist": 12, "p": [0, 0, 12] },
+   "op": "new",
+   "profiles": null
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

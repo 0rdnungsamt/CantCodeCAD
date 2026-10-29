@@ -1,0 +1,168 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Muster auf Pfad mit Startpunkt",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Würfel",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 45,
+     "y": -5
+    },
+    {
+     "id": "b",
+     "x": 55,
+     "y": -5
+    },
+    {
+     "id": "c",
+     "x": 55,
+     "y": 5
+    },
+    {
+     "id": "d",
+     "x": 45,
+     "y": 5
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Würfel",
+   "sketch": "s1",
+   "distance": 10,
+   "direction": "normal",
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Pfad",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "p",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "q",
+     "x": 100,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "m1",
+     "type": "line",
+     "p1": "p",
+     "p2": "q"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "pt",
+   "type": "pattern",
+   "name": "Muster auf Pfad",
+   "features": [
+    "e1"
+   ],
+   "kind": "path",
+   "path": "s2",
+   "count": 3,
+   "dist": "spacing",
+   "spacing": 20,
+   "orient": "same",
+   "flip": false,
+   "startPos": 50,
+   "sym": true,
+   "axis": "Z",
+   "angle": 360
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

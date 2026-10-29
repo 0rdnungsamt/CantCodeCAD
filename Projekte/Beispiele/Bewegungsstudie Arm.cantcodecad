@@ -1,0 +1,313 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Bewegungsstudie Arm",
+ "units": "mm",
+ "kind": "assembly",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Bolzen",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k",
+     "type": "circle",
+     "c": "m",
+     "r": 3
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Bolzen",
+   "sketch": "s1",
+   "distance": 10,
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Arm",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": -6,
+     "y": -5
+    },
+    {
+     "id": "b",
+     "x": 40,
+     "y": -5
+    },
+    {
+     "id": "c",
+     "x": 40,
+     "y": 5
+    },
+    {
+     "id": "d",
+     "x": -6,
+     "y": 5
+    },
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    },
+    {
+     "id": "k",
+     "type": "circle",
+     "c": "m",
+     "r": 3.5
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e2",
+   "type": "extrude",
+   "name": "Arm",
+   "sketch": "s2",
+   "distance": 4,
+   "op": "new",
+   "profiles": [
+    [
+     20,
+     0
+    ]
+   ]
+  },
+  {
+   "id": "s3",
+   "type": "sketch",
+   "name": "Hindernis",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 28,
+     "y": -16
+    },
+    {
+     "id": "b",
+     "x": 34,
+     "y": -16
+    },
+    {
+     "id": "c",
+     "x": 34,
+     "y": -10
+    },
+    {
+     "id": "d",
+     "x": 28,
+     "y": -10
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e3",
+   "type": "extrude",
+   "name": "Hindernis",
+   "sketch": "s3",
+   "distance": 4,
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "j1",
+   "type": "joint",
+   "name": "Drehgelenk",
+   "kind": "revolute",
+   "o1": {
+    "kind": "edge",
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      3.5,
+      0,
+      0
+     ]
+    },
+    "body": "e2"
+   },
+   "o2": {
+    "kind": "edge",
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      3,
+      0,
+      0
+     ]
+    },
+    "body": "e1"
+   },
+   "comp": "k1",
+   "body1": "e2",
+   "angle": 0,
+   "offset": 0,
+   "flip": true
+  }
+ ],
+ "bodies": {
+  "e1": {
+   "name": "Bolzen",
+   "hidden": false
+  },
+  "e2": {
+   "name": "Arm",
+   "hidden": false
+  },
+  "e3": {
+   "name": "Hindernis",
+   "hidden": false
+  }
+ },
+ "components": [
+  {
+   "id": "k1",
+   "name": "Arm",
+   "bodies": [
+    "e2"
+   ],
+   "parent": null
+  }
+ ],
+ "inserts": []
+}

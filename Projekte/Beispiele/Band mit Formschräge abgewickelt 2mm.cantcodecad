@@ -1,0 +1,405 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Band mit Formschräge abgewickelt",
+ "units": "mm",
+ "sheet": {
+  "t": 2,
+  "r": 2,
+  "k": 0.44
+ },
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Umriss mit Ecken R8",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "p1",
+     "x": 8,
+     "y": 0
+    },
+    {
+     "id": "p2",
+     "x": 92,
+     "y": 0
+    },
+    {
+     "id": "p3",
+     "x": 100,
+     "y": 8
+    },
+    {
+     "id": "p4",
+     "x": 100,
+     "y": 52
+    },
+    {
+     "id": "p5",
+     "x": 92,
+     "y": 60
+    },
+    {
+     "id": "p6",
+     "x": 8,
+     "y": 60
+    },
+    {
+     "id": "p7",
+     "x": 0,
+     "y": 52
+    },
+    {
+     "id": "p8",
+     "x": 0,
+     "y": 8
+    },
+    {
+     "id": "c1",
+     "x": 92,
+     "y": 8
+    },
+    {
+     "id": "c2",
+     "x": 92,
+     "y": 52
+    },
+    {
+     "id": "c3",
+     "x": 8,
+     "y": 52
+    },
+    {
+     "id": "c4",
+     "x": 8,
+     "y": 8
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "p1",
+     "p2": "p2"
+    },
+    {
+     "id": "k1",
+     "type": "arc",
+     "c": "c1",
+     "s": "p2",
+     "e": "p3",
+     "r": 8,
+     "a0": -1.5707963267948966,
+     "a1": 0
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "p3",
+     "p2": "p4"
+    },
+    {
+     "id": "k2",
+     "type": "arc",
+     "c": "c2",
+     "s": "p4",
+     "e": "p5",
+     "r": 8,
+     "a0": 0,
+     "a1": 1.5707963267948966
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "p5",
+     "p2": "p6"
+    },
+    {
+     "id": "k3",
+     "type": "arc",
+     "c": "c3",
+     "s": "p6",
+     "e": "p7",
+     "r": 8,
+     "a0": 1.5707963267948966,
+     "a1": 3.141592653589793
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "p7",
+     "p2": "p8"
+    },
+    {
+     "id": "k4",
+     "type": "arc",
+     "c": "c4",
+     "s": "p8",
+     "e": "p1",
+     "r": 8,
+     "a0": 3.141592653589793,
+     "a1": 4.71238898038469
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Block",
+   "sketch": "s1",
+   "distance": 30,
+   "op": "new",
+   "profiles": null,
+   "taper": 10
+  },
+  {
+   "id": "sh1",
+   "type": "shell",
+   "name": "Schale",
+   "thickness": 2,
+   "faces": [
+    {
+     "t": "PLANE",
+     "n": [
+      0,
+      0,
+      1
+     ],
+     "dist": 30,
+     "p": [
+      50,
+      30,
+      30
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Boden weg",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": -20,
+     "y": -20
+    },
+    {
+     "id": "b",
+     "x": 120,
+     "y": -20
+    },
+    {
+     "id": "c",
+     "x": 120,
+     "y": 80
+    },
+    {
+     "id": "d",
+     "x": -20,
+     "y": 80
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "x2",
+   "type": "extrude",
+   "name": "Boden abschneiden",
+   "sketch": "s2",
+   "distance": 2.5,
+   "op": "cut",
+   "profiles": null
+  },
+  {
+   "id": "s3",
+   "type": "sketch",
+   "name": "Schlitz",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 49,
+     "y": 50
+    },
+    {
+     "id": "b",
+     "x": 51,
+     "y": 50
+    },
+    {
+     "id": "c",
+     "x": 51,
+     "y": 75
+    },
+    {
+     "id": "d",
+     "x": 49,
+     "y": 75
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "x3",
+   "type": "extrude",
+   "name": "Schlitz",
+   "sketch": "s3",
+   "distance": 40,
+   "op": "cut",
+   "profiles": null
+  },
+  {
+   "id": "cv1",
+   "type": "sm_convert",
+   "name": "In Blech umwandeln",
+   "face": {
+    "t": "PLANE",
+    "n": [
+     0,
+     -0.984807753,
+     -0.173648178
+    ],
+    "dist": 0,
+    "p": [
+     50,
+     -2.64,
+     15
+    ]
+   },
+   "faceBody": null
+  }
+ ],
+ "bodies": {
+  "e1": {
+   "name": "Körper1",
+   "hidden": false
+  }
+ },
+ "components": [],
+ "inserts": []
+}

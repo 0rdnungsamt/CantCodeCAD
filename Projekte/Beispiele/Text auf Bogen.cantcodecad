@@ -1,0 +1,101 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Text auf Bogen",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Schrift",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "c",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "s",
+     "x": 37.58770483143634,
+     "y": 13.680805733026748
+    },
+    {
+     "id": "e",
+     "x": -37.587704831436334,
+     "y": 13.680805733026755
+    },
+    {
+     "id": "tp",
+     "x": -20,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "a1",
+     "type": "arc",
+     "c": "c",
+     "s": "s",
+     "e": "e",
+     "r": 40,
+     "a0": 0.3490658503988659,
+     "a1": 2.792526803190927,
+     "cons": true
+    }
+   ],
+   "rules": [],
+   "texts": [
+    {
+     "id": "t1",
+     "p": "tp",
+     "text": "CANTCODECAD",
+     "h": 8,
+     "font": "sans",
+     "angle": 0,
+     "path": "a1"
+    }
+   ]
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Schrift",
+   "sketch": "s1",
+   "distance": 3,
+   "op": "new",
+   "profiles": null
+  }
+ ],
+ "bodies": {
+  "e1": {
+   "name": "Schriftzug",
+   "hidden": false
+  }
+ },
+ "components": [],
+ "inserts": []
+}

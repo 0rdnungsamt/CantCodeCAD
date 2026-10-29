@@ -1,0 +1,235 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Ellipse und Spline",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Ellipse geteilt",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "c",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "a",
+     "x": 40,
+     "y": 0
+    },
+    {
+     "id": "b",
+     "x": 0,
+     "y": 15
+    },
+    {
+     "id": "powow107z1",
+     "x": 19.999999999999996,
+     "y": 12.99038105676658
+    },
+    {
+     "id": "powp4ze253",
+     "x": 20.000000000000004,
+     "y": -12.990381056766578
+    }
+   ],
+   "curves": [
+    {
+     "id": "ax1",
+     "type": "line",
+     "p1": "c",
+     "p2": "a",
+     "cons": true
+    },
+    {
+     "id": "ax2",
+     "type": "line",
+     "p1": "c",
+     "p2": "b",
+     "cons": true
+    },
+    {
+     "id": "e1",
+     "type": "ellipse",
+     "c": "c",
+     "a": "a",
+     "b": "b",
+     "axes": [
+      "ax1",
+      "ax2"
+     ],
+     "u0": 0.16666666666666674,
+     "u1": 0.8333333333333335
+    },
+    {
+     "id": "cut",
+     "type": "line",
+     "p1": "powp4ze253",
+     "p2": "powow107z1"
+    }
+   ],
+   "rules": [
+    {
+     "id": "r1",
+     "type": "perpendicular",
+     "a": "ax1",
+     "b": "ax2"
+    },
+    {
+     "id": "rowow2xc52",
+     "type": "pointOnCurve",
+     "p": "powow107z1",
+     "c": "e1"
+    },
+    {
+     "id": "rowp4g8zw4",
+     "type": "pointOnCurve",
+     "p": "powp4ze253",
+     "c": "e1"
+    }
+   ],
+   "texts": [],
+   "helpers": [],
+   "patterns": []
+  },
+  {
+   "id": "x1",
+   "type": "extrude",
+   "name": "Ellipse",
+   "sketch": "s1",
+   "distance": 10,
+   "direction": "normal",
+   "op": "new",
+   "profiles": [
+    [
+     0,
+     0
+    ]
+   ]
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Spline-Kontur",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "k1",
+     "x": 60,
+     "y": 0
+    },
+    {
+     "id": "k2",
+     "x": 70,
+     "y": 20
+    },
+    {
+     "id": "k3",
+     "x": 90,
+     "y": 25
+    },
+    {
+     "id": "k4",
+     "x": 110,
+     "y": 10
+    },
+    {
+     "id": "k5",
+     "x": 120,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "sp",
+     "type": "spline",
+     "pts": [
+      "k1",
+      "k2",
+      "k3",
+      "k4",
+      "k5"
+     ]
+    },
+    {
+     "id": "base",
+     "type": "line",
+     "p1": "k5",
+     "p2": "k1"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "x2",
+   "type": "extrude",
+   "name": "Spline",
+   "sketch": "s2",
+   "distance": 5,
+   "direction": "normal",
+   "op": "new",
+   "profiles": null
+  }
+ ],
+ "bodies": {
+  "x1": {
+   "name": "Körper1",
+   "hidden": false
+  },
+  "x2": {
+   "name": "Körper2",
+   "hidden": false
+  }
+ },
+ "components": [],
+ "inserts": []
+}

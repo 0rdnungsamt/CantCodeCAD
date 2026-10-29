@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cantcodecad Prüfstand</title>
+<link rel="stylesheet" href="/gfonts/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root { --ok: #2f8f46; --diff: #c77700; --fail: #c62828; --neu: #5b6b7a; --line: #dde3e9; }
+  body { margin: 0; padding: 24px; font: 14px 'IBM Plex Sans', sans-serif; color: #1f2933; background: #f6f8fa; }
+  h1 { font-size: 18px; margin: 0 0 4px; }
+  p { margin: 0 0 16px; color: #52606d; }
+  .bar { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; }
+  button { font: inherit; padding: 6px 14px; border: 1px solid #b8c2cc; border-radius: 4px; background: #fff; cursor: pointer; }
+  button:disabled { opacity: .5; cursor: default; }
+  #summary { font-weight: 600; }
+  body[data-state="ok"] #summary { color: var(--ok); }
+  body[data-state="fail"] #summary { color: var(--fail); }
+  table { border-collapse: collapse; width: 100%; background: #fff; border: 1px solid var(--line); }
+  td { padding: 6px 10px; border-top: 1px solid var(--line); vertical-align: top; }
+  td.st { font-weight: 600; white-space: nowrap; }
+  td.ms { font-family: 'IBM Plex Mono', monospace; color: #7b8794; white-space: nowrap; text-align: right; }
+  tr.ok td.st { color: var(--ok); }
+  tr.diff td.st { color: var(--diff); }
+  tr.fail td.st { color: var(--fail); }
+  tr.neu td.st { color: var(--neu); }
+</style>
+</head>
+<body>
+<h1>cantcodecad Prüfstand</h1>
+<p>Baut alle Beispiele aus <code>Projekte/Beispiele</code> neu auf und vergleicht sie mit <code>tests/referenz.json</code>.
+Nur einzelne Beispiele: <code>?nur=Blech</code> an die Adresse hängen.</p>
+<div class="bar">
+  <button id="run">Erneut prüfen</button>
+  <button id="save" disabled title="Lädt referenz.json herunter; nach tests/ kopieren, wenn die Abweichungen gewollt sind">Ergebnis als Referenz herunterladen</button>
+  <span id="summary"></span>
+</div>
+<table><tbody id="rows"></tbody></table>
+<script type="module" src="run.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Bogen parallel gezogen",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Kreis R 5",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 5
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Viertelbogen R 50",
+   "plane": {
+    "key": "XZ",
+    "label": "XZ · Vorderansicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 50,
+     "y": 0
+    },
+    {
+     "id": "a",
+     "x": 50,
+     "y": 50
+    },
+    {
+     "id": "b",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "arc",
+     "c": "m",
+     "s": "a",
+     "e": "b",
+     "r": 50,
+     "a0": 1.5707963267948966,
+     "a1": 3.141592653589793
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "w1",
+   "type": "sweep",
+   "name": "Parallel",
+   "sketch": "s1",
+   "path": "s2",
+   "corners": "right",
+   "orient": "parallel",
+   "op": "new",
+   "profiles": null
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

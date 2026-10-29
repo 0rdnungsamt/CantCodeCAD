@@ -1,0 +1,23 @@
+{
+  "format": 2,
+  "app": "cantcodecad",
+  "name": "Rohrbogen",
+  "units": "mm",
+  "features": [
+    { "id": "s1", "type": "sketch", "name": "Rohrpfad", "plane": { "o": [0, 0, 0], "x": [1, 0, 0], "y": [0, 1, 0], "n": [0, 0, 1] },
+      "points": [{ "id": "a", "x": 0, "y": 0 }, { "id": "b", "x": 100, "y": 0 }, { "id": "m", "x": 100, "y": 30 }, { "id": "c", "x": 130, "y": 30 }, { "id": "d", "x": 130, "y": 80 }],
+      "curves": [
+        { "id": "l1", "type": "line", "p1": "a", "p2": "b" },
+        { "id": "k1", "type": "arc", "c": "m", "s": "b", "e": "c", "r": 30, "a0": -1.5707963267948966, "a1": 0 },
+        { "id": "l2", "type": "line", "p1": "c", "p2": "d" }
+      ], "rules": [] },
+    { "id": "r1", "type": "pipe", "name": "Rundrohr", "path": "s1", "section": "circle", "size": 20, "hollow": true, "wall": 2, "corners": "right", "op": "new" },
+    { "id": "s2", "type": "sketch", "name": "Stabpfad", "plane": { "o": [0, 0, 0], "x": [1, 0, 0], "y": [0, 1, 0], "n": [0, 0, 1] },
+      "points": [{ "id": "p", "x": 0, "y": 60 }, { "id": "q", "x": 100, "y": 60 }],
+      "curves": [{ "id": "l3", "type": "line", "p1": "p", "p2": "q" }], "rules": [] },
+    { "id": "r2", "type": "pipe", "name": "Dreikantstab", "path": "s2", "section": "triangle", "size": 10, "hollow": false, "wall": 1, "corners": "right", "op": "new" }
+  ],
+  "bodies": {},
+  "components": [],
+  "inserts": []
+}

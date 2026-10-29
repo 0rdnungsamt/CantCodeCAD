@@ -1,0 +1,37 @@
+{
+  "format": 2,
+  "app": "cantcodecad",
+  "name": "Rohrbogen im Raum",
+  "units": "mm",
+  "features": [
+    { "id": "s1", "type": "sketch", "name": "Pfad im Raum",
+      "points": [
+        { "id": "a", "x": 0, "y": 0, "z": 0 },
+        { "id": "b", "x": 60, "y": 0, "z": 0 },
+        { "id": "m1", "x": 74.1421356, "y": 0, "z": 5.8578644 },
+        { "id": "c", "x": 80, "y": 0, "z": 20 },
+        { "id": "d", "x": 80, "y": 0, "z": 70 }
+      ],
+      "curves": [
+        { "id": "l1", "type": "line", "p1": "a", "p2": "b" },
+        { "id": "k1", "type": "arc3", "p1": "b", "p2": "m1", "p3": "c" },
+        { "id": "l2", "type": "line", "p1": "c", "p2": "d" }
+      ], "rules": [] },
+    { "id": "r1", "type": "pipe", "name": "Rohr ⌀ 16 im Raum", "path": "s1", "section": "circle", "size": 16, "hollow": true, "wall": 2, "corners": "right", "op": "new" },
+    { "id": "s2", "type": "sketch", "name": "Spline im Raum",
+      "points": [
+        { "id": "p", "x": 0, "y": 40, "z": 0 },
+        { "id": "q", "x": 30, "y": 60, "z": 25 },
+        { "id": "u", "x": 60, "y": 40, "z": 50 },
+        { "id": "v", "x": 90, "y": 60, "z": 25 },
+        { "id": "w", "x": 120, "y": 40, "z": 0 }
+      ],
+      "curves": [
+        { "id": "sp", "type": "spline", "pts": ["p", "q", "u", "v", "w"], "closed": false }
+      ], "rules": [] },
+    { "id": "r2", "type": "pipe", "name": "Rundstab ⌀ 12 entlang Spline", "path": "s2", "section": "circle", "size": 12, "hollow": false, "wall": 1, "corners": "round", "op": "new" }
+  ],
+  "bodies": {},
+  "components": [],
+  "inserts": []
+}

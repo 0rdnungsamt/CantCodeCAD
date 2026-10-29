@@ -1,0 +1,183 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Übergangslasche Blechmitte",
+ "units": "mm",
+ "sheet": {
+  "t": 2,
+  "r": 2,
+  "k": 0.44
+ },
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Quadrat unten",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": -20,
+     "y": -20
+    },
+    {
+     "id": "b",
+     "x": 20,
+     "y": -20
+    },
+    {
+     "id": "c",
+     "x": 20,
+     "y": 20
+    },
+    {
+     "id": "d",
+     "x": -20,
+     "y": 20
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Quadrat oben",
+   "plane": {
+    "key": "FACE",
+    "label": "Ebene z = 50",
+    "o": [
+     0,
+     0,
+     50
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": -20,
+     "y": -20
+    },
+    {
+     "id": "b",
+     "x": 20,
+     "y": -20
+    },
+    {
+     "id": "c",
+     "x": 20,
+     "y": 20
+    },
+    {
+     "id": "d",
+     "x": -20,
+     "y": 20
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "t1",
+   "type": "sm_loft",
+   "name": "Vierkant mittig",
+   "skA": "s1",
+   "skB": "s2",
+   "side": "mid",
+   "mode": "brake",
+   "facets": 4,
+   "op": "new"
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

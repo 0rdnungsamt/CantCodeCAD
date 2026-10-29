@@ -1,0 +1,280 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "U-Profil mit Schlitz über stehender Biegung",
+ "units": "mm",
+ "sheet": {
+  "t": 2,
+  "r": 2,
+  "k": 0.44
+ },
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Querschnitt",
+   "plane": {
+    "key": "XZ",
+    "label": "XZ · Vorderansicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 0,
+     "y": 30
+    },
+    {
+     "id": "b",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "c",
+     "x": 80,
+     "y": 0
+    },
+    {
+     "id": "d",
+     "x": 80,
+     "y": 30
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "k1",
+   "type": "sm_contour",
+   "name": "Konturlasche",
+   "sketch": "s1",
+   "width": 60,
+   "direction": "reverse",
+   "flip": false,
+   "op": "new"
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Bohrbild",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "q1",
+     "x": 20,
+     "y": 15
+    },
+    {
+     "id": "q2",
+     "x": 20,
+     "y": 45
+    }
+   ],
+   "curves": [],
+   "rules": []
+  },
+  {
+   "id": "h1",
+   "type": "hole",
+   "name": "Bohrungen",
+   "sketch": "s2",
+   "kind": "simple",
+   "preset": "clear:M6",
+   "d": 6.6,
+   "depthMode": "through",
+   "depth": 10,
+   "tip": "drill",
+   "cd": 11,
+   "cdepth": 6.6,
+   "cangle": 90,
+   "flip": false
+  },
+  {
+   "id": "u1",
+   "type": "sm_unfold",
+   "name": "Linke Biegung abwickeln",
+   "face": {
+    "t": "PLANE",
+    "n": [
+     0,
+     0,
+     -1
+    ],
+    "dist": 0,
+    "p": [
+     40,
+     30,
+     0
+    ]
+   },
+   "faceBody": "k1",
+   "bends": [
+    {
+     "t": "CYLINDRE",
+     "p": [
+      1.171573,
+      30,
+      1.171573
+     ],
+     "r": 4
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "type": "sketch",
+   "name": "Schlitz",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "q1",
+     "x": 70,
+     "y": 10
+    },
+    {
+     "id": "q2",
+     "x": 79,
+     "y": 10
+    },
+    {
+     "id": "q3",
+     "x": 79,
+     "y": 50
+    },
+    {
+     "id": "q4",
+     "x": 70,
+     "y": 50
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "line",
+     "p1": "q1",
+     "p2": "q2"
+    },
+    {
+     "id": "k2",
+     "type": "line",
+     "p1": "q2",
+     "p2": "q3"
+    },
+    {
+     "id": "k3",
+     "type": "line",
+     "p1": "q3",
+     "p2": "q4"
+    },
+    {
+     "id": "k4",
+     "type": "line",
+     "p1": "q4",
+     "p2": "q1"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "x1",
+   "type": "extrude",
+   "name": "Schlitz schneiden",
+   "sketch": "s3",
+   "distance": 5,
+   "op": "cut",
+   "profiles": null
+  },
+  {
+   "id": "r1",
+   "type": "sm_refold",
+   "name": "Zurückfalten"
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

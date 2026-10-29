@@ -1,0 +1,186 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Platte Teilefamilie",
+ "units": "mm",
+ "features": [
+  {
+   "id": "bx",
+   "type": "primitive",
+   "kind": "box",
+   "name": "Platte",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 0,
+   "cy": 0,
+   "w": 120,
+   "l": 60,
+   "h": 5,
+   "op": "new",
+   "exprs": {
+    "w": {
+     "e": "breite",
+     "v": 120
+    },
+    "l": {
+     "e": "tiefe",
+     "v": 60
+    },
+    "h": {
+     "e": "dicke",
+     "v": 5
+    }
+   }
+  },
+  {
+   "id": "cy",
+   "type": "primitive",
+   "kind": "cylinder",
+   "name": "Bohrung",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 0,
+   "cy": 0,
+   "d": 10,
+   "h": 5,
+   "op": "cut",
+   "exprs": {
+    "d": {
+     "e": "bohrung",
+     "v": 10
+    },
+    "h": {
+     "e": "dicke",
+     "v": 5
+    }
+   }
+  },
+  {
+   "id": "ch",
+   "type": "chamfer",
+   "name": "Fasen",
+   "distance": 1,
+   "all": true,
+   "edges": [],
+   "suppressed": true
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": [],
+ "drawing": {
+  "opts": {
+   "format": "A4",
+   "scale": "auto",
+   "hidden": true,
+   "iso": true,
+   "dims": true,
+   "centers": true,
+   "holes": true,
+   "section": false,
+   "bom": true,
+   "cutX": ""
+  },
+  "dims": [
+   {
+    "id": "0sm14d33by",
+    "view": "top",
+    "a": [
+     35,
+     12
+    ],
+    "b": [
+     35,
+     38
+    ],
+    "dir": "v",
+    "at": -15.793923140799537
+   },
+   {
+    "id": "jlnaz7ag5l",
+    "view": "top",
+    "a": [
+     35,
+     12
+    ],
+    "b": [
+     65,
+     12
+    ],
+    "dir": "h",
+    "at": -11.910551723339438
+   }
+  ]
+ },
+ "params": [
+  {
+   "id": "p1",
+   "name": "breite",
+   "expr": "120",
+   "comment": "Länge X"
+  },
+  {
+   "id": "p2",
+   "name": "tiefe",
+   "expr": "60",
+   "comment": "Länge Y"
+  },
+  {
+   "id": "p3",
+   "name": "dicke",
+   "expr": "5",
+   "comment": "Blechdicke"
+  },
+  {
+   "id": "p4",
+   "name": "bohrung",
+   "expr": "10",
+   "comment": "Bohrungs-⌀"
+  }
+ ],
+ "configs": {
+  "cols": [
+   "p:breite",
+   "p:tiefe",
+   "p:bohrung",
+   "s:ch"
+  ],
+  "rows": [
+   {
+    "id": "cS",
+    "name": "S",
+    "vals": {
+     "p:breite": "80",
+     "p:tiefe": "40",
+     "p:bohrung": "8",
+     "s:ch": true
+    }
+   },
+   {
+    "id": "cM",
+    "name": "M",
+    "vals": {
+     "p:breite": "120",
+     "p:tiefe": "60",
+     "p:bohrung": "10",
+     "s:ch": true
+    }
+   },
+   {
+    "id": "cL",
+    "name": "L",
+    "vals": {
+     "p:breite": "160",
+     "p:tiefe": "80",
+     "p:bohrung": "12",
+     "s:ch": false
+    }
+   }
+  ],
+  "active": "cM"
+ }
+}

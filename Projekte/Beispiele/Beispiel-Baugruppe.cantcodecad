@@ -1,0 +1,1013 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Beispiel-Baugruppe",
+ "units": "mm",
+ "features": [
+  {
+   "id": "53rl99cy5n",
+   "type": "joint",
+   "name": "Gelenk1",
+   "kind": "rigid",
+   "o1": {
+    "kind": "edge",
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      104,
+      0,
+      5
+     ]
+    },
+    "body": "i3ehtk4aym/e1"
+   },
+   "o2": {
+    "kind": "edge",
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      30.5,
+      12,
+      8
+     ]
+    },
+    "body": "f9nj4988ke/e1"
+   },
+   "comp": "i3ehtk4aym",
+   "body1": "i3ehtk4aym/e1",
+   "angle": 0,
+   "offset": 0,
+   "flip": false
+  },
+  {
+   "id": "sl1a21o1pt",
+   "type": "joint",
+   "name": "Gelenk2",
+   "kind": "rigid",
+   "o1": {
+    "kind": "edge",
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      131,
+      0,
+      5
+     ]
+    },
+    "body": "0x86avsdcr/e1"
+   },
+   "o2": {
+    "kind": "edge",
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      60.5,
+      12,
+      8
+     ]
+    },
+    "body": "f9nj4988ke/e1"
+   },
+   "comp": "0x86avsdcr",
+   "body1": "0x86avsdcr/e1",
+   "angle": 0,
+   "offset": 0,
+   "flip": false
+  },
+  {
+   "id": "s8ts31a59v",
+   "type": "joint",
+   "name": "Gelenk3",
+   "kind": "rigid",
+   "o1": {
+    "kind": "edge",
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      158,
+      0,
+      5
+     ]
+    },
+    "body": "5dvzkimfr3/e1"
+   },
+   "o2": {
+    "kind": "edge",
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      30.5,
+      38,
+      8
+     ]
+    },
+    "body": "f9nj4988ke/e1"
+   },
+   "comp": "5dvzkimfr3",
+   "body1": "5dvzkimfr3/e1",
+   "angle": 0,
+   "offset": 0,
+   "flip": false
+  },
+  {
+   "id": "3kcil3f8tx",
+   "type": "joint",
+   "name": "Gelenk4",
+   "kind": "rigid",
+   "o1": {
+    "kind": "edge",
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      185,
+      0,
+      5
+     ]
+    },
+    "body": "blbq1sgi5c/e1"
+   },
+   "o2": {
+    "kind": "edge",
+    "ref": {
+     "t": "CIRCLE",
+     "p": [
+      60.5,
+      38,
+      8
+     ]
+    },
+    "body": "f9nj4988ke/e1"
+   },
+   "comp": "blbq1sgi5c",
+   "body1": "blbq1sgi5c/e1",
+   "angle": 0,
+   "offset": 0,
+   "flip": false
+  }
+ ],
+ "bodies": {
+  "f9nj4988ke/e1": {
+   "name": "Winkel 80x60x8: Winkel",
+   "hidden": false,
+   "material": "steel",
+   "color": ""
+  },
+  "i3ehtk4aym/e1": {
+   "name": "Bolzen M8x22: Bolzen",
+   "hidden": false,
+   "material": "stainless",
+   "color": ""
+  },
+  "0x86avsdcr/e1": {
+   "name": "Bolzen M8x22 (2): Bolzen",
+   "hidden": false,
+   "material": "stainless",
+   "color": ""
+  },
+  "5dvzkimfr3/e1": {
+   "name": "Bolzen M8x22 (3): Bolzen",
+   "hidden": false,
+   "material": "stainless",
+   "color": ""
+  },
+  "blbq1sgi5c/e1": {
+   "name": "Bolzen M8x22 (4): Bolzen",
+   "hidden": false,
+   "material": "stainless",
+   "color": ""
+  }
+ },
+ "components": [],
+ "inserts": [
+  {
+   "id": "f9nj4988ke",
+   "name": "Winkel 80x60x8",
+   "file": "Beispiele/Winkel 80x60x8.cantcodecad",
+   "at": [
+    0,
+    0,
+    0
+   ],
+   "rot": null,
+   "part": {
+    "format": 2,
+    "app": "cantcodecad",
+    "name": "Winkel 80x60x8",
+    "units": "mm",
+    "features": [
+     {
+      "id": "s1",
+      "type": "sketch",
+      "name": "Profil",
+      "plane": {
+       "key": "XZ",
+       "label": "XZ · Vorderansicht",
+       "o": [
+        0,
+        0,
+        0
+       ],
+       "x": [
+        1,
+        0,
+        0
+       ],
+       "y": [
+        0,
+        0,
+        1
+       ],
+       "n": [
+        0,
+        -1,
+        0
+       ]
+      },
+      "points": [
+       {
+        "id": "p0",
+        "x": 0,
+        "y": 0
+       },
+       {
+        "id": "p1",
+        "x": 80,
+        "y": 0
+       },
+       {
+        "id": "p2",
+        "x": 80,
+        "y": 8
+       },
+       {
+        "id": "p3",
+        "x": 8,
+        "y": 8
+       },
+       {
+        "id": "p4",
+        "x": 8,
+        "y": 60
+       },
+       {
+        "id": "p5",
+        "x": 0,
+        "y": 60
+       }
+      ],
+      "curves": [
+       {
+        "id": "l0",
+        "type": "line",
+        "p1": "p0",
+        "p2": "p1"
+       },
+       {
+        "id": "l1",
+        "type": "line",
+        "p1": "p1",
+        "p2": "p2"
+       },
+       {
+        "id": "l2",
+        "type": "line",
+        "p1": "p2",
+        "p2": "p3"
+       },
+       {
+        "id": "l3",
+        "type": "line",
+        "p1": "p3",
+        "p2": "p4"
+       },
+       {
+        "id": "l4",
+        "type": "line",
+        "p1": "p4",
+        "p2": "p5"
+       },
+       {
+        "id": "l5",
+        "type": "line",
+        "p1": "p5",
+        "p2": "p0"
+       }
+      ],
+      "rules": []
+     },
+     {
+      "id": "e1",
+      "type": "extrude",
+      "name": "Winkel",
+      "sketch": "s1",
+      "distance": 50,
+      "direction": "reverse",
+      "op": "new",
+      "profiles": null
+     },
+     {
+      "id": "s2",
+      "type": "sketch",
+      "name": "Bohrbild",
+      "plane": {
+       "key": "FACE",
+       "label": "Fläche",
+       "o": [
+        0,
+        0,
+        8
+       ],
+       "x": [
+        1,
+        0,
+        0
+       ],
+       "y": [
+        0,
+        1,
+        0
+       ],
+       "n": [
+        0,
+        0,
+        1
+       ]
+      },
+      "points": [
+       {
+        "id": "a",
+        "x": 35,
+        "y": 12
+       },
+       {
+        "id": "b",
+        "x": 65,
+        "y": 12
+       },
+       {
+        "id": "c",
+        "x": 35,
+        "y": 38
+       },
+       {
+        "id": "d",
+        "x": 65,
+        "y": 38
+       }
+      ],
+      "curves": [],
+      "rules": []
+     },
+     {
+      "id": "h1",
+      "type": "hole",
+      "name": "Bohrungen",
+      "sketch": "s2",
+      "kind": "simple",
+      "preset": "clear:M8",
+      "d": 9,
+      "depthMode": "through",
+      "depth": 10,
+      "tip": "drill",
+      "flip": false
+     }
+    ],
+    "bodies": {
+     "e1": {
+      "name": "Winkel",
+      "hidden": false,
+      "material": "steel",
+      "color": ""
+     }
+    },
+    "components": [],
+    "inserts": []
+   }
+  },
+  {
+   "id": "i3ehtk4aym",
+   "name": "Bolzen M8x22",
+   "file": "Beispiele/Bolzen M8x22.cantcodecad",
+   "at": [
+    100,
+    0,
+    0
+   ],
+   "rot": null,
+   "part": {
+    "format": 2,
+    "app": "cantcodecad",
+    "name": "Bolzen M8x22",
+    "units": "mm",
+    "features": [
+     {
+      "id": "s1",
+      "type": "sketch",
+      "name": "Kopf",
+      "plane": {
+       "key": "XY",
+       "label": "XY · Draufsicht",
+       "o": [
+        0,
+        0,
+        0
+       ],
+       "x": [
+        1,
+        0,
+        0
+       ],
+       "y": [
+        0,
+        1,
+        0
+       ],
+       "n": [
+        0,
+        0,
+        1
+       ]
+      },
+      "points": [
+       {
+        "id": "c",
+        "x": 0,
+        "y": 0
+       }
+      ],
+      "curves": [
+       {
+        "id": "k",
+        "type": "circle",
+        "c": "c",
+        "r": 6.5
+       }
+      ],
+      "rules": []
+     },
+     {
+      "id": "e1",
+      "type": "extrude",
+      "name": "Kopf",
+      "sketch": "s1",
+      "distance": 5,
+      "direction": "normal",
+      "op": "new",
+      "profiles": null
+     },
+     {
+      "id": "s2",
+      "type": "sketch",
+      "name": "Schaft",
+      "plane": {
+       "key": "FACE",
+       "label": "Fläche des Körpers",
+       "o": [
+        0,
+        0,
+        5
+       ],
+       "x": [
+        1,
+        0,
+        0
+       ],
+       "y": [
+        0,
+        1,
+        0
+       ],
+       "n": [
+        0,
+        0,
+        1
+       ]
+      },
+      "points": [
+       {
+        "id": "c",
+        "x": 0,
+        "y": 0
+       }
+      ],
+      "curves": [
+       {
+        "id": "k",
+        "type": "circle",
+        "c": "c",
+        "r": 4
+       }
+      ],
+      "rules": []
+     },
+     {
+      "id": "e2",
+      "type": "extrude",
+      "name": "Schaft",
+      "sketch": "s2",
+      "distance": 22,
+      "direction": "normal",
+      "op": "join",
+      "profiles": null
+     },
+     {
+      "id": "c1",
+      "type": "chamfer",
+      "name": "Fase1",
+      "distance": 0.8,
+      "all": false,
+      "edges": [
+       {
+        "t": "CIRCLE",
+        "p": [
+         4,
+         0,
+         27
+        ]
+       }
+      ]
+     }
+    ],
+    "bodies": {
+     "e1": {
+      "name": "Bolzen",
+      "hidden": false,
+      "material": "stainless",
+      "color": ""
+     }
+    },
+    "components": [],
+    "inserts": []
+   }
+  },
+  {
+   "id": "0x86avsdcr",
+   "name": "Bolzen M8x22 (2)",
+   "file": "Beispiele/Bolzen M8x22.cantcodecad",
+   "at": [
+    127,
+    0,
+    0
+   ],
+   "rot": null,
+   "part": {
+    "format": 2,
+    "app": "cantcodecad",
+    "name": "Bolzen M8x22",
+    "units": "mm",
+    "features": [
+     {
+      "id": "s1",
+      "type": "sketch",
+      "name": "Kopf",
+      "plane": {
+       "key": "XY",
+       "label": "XY · Draufsicht",
+       "o": [
+        0,
+        0,
+        0
+       ],
+       "x": [
+        1,
+        0,
+        0
+       ],
+       "y": [
+        0,
+        1,
+        0
+       ],
+       "n": [
+        0,
+        0,
+        1
+       ]
+      },
+      "points": [
+       {
+        "id": "c",
+        "x": 0,
+        "y": 0
+       }
+      ],
+      "curves": [
+       {
+        "id": "k",
+        "type": "circle",
+        "c": "c",
+        "r": 6.5
+       }
+      ],
+      "rules": []
+     },
+     {
+      "id": "e1",
+      "type": "extrude",
+      "name": "Kopf",
+      "sketch": "s1",
+      "distance": 5,
+      "direction": "normal",
+      "op": "new",
+      "profiles": null
+     },
+     {
+      "id": "s2",
+      "type": "sketch",
+      "name": "Schaft",
+      "plane": {
+       "key": "FACE",
+       "label": "Fläche des Körpers",
+       "o": [
+        0,
+        0,
+        5
+       ],
+       "x": [
+        1,
+        0,
+        0
+       ],
+       "y": [
+        0,
+        1,
+        0
+       ],
+       "n": [
+        0,
+        0,
+        1
+       ]
+      },
+      "points": [
+       {
+        "id": "c",
+        "x": 0,
+        "y": 0
+       }
+      ],
+      "curves": [
+       {
+        "id": "k",
+        "type": "circle",
+        "c": "c",
+        "r": 4
+       }
+      ],
+      "rules": []
+     },
+     {
+      "id": "e2",
+      "type": "extrude",
+      "name": "Schaft",
+      "sketch": "s2",
+      "distance": 22,
+      "direction": "normal",
+      "op": "join",
+      "profiles": null
+     },
+     {
+      "id": "c1",
+      "type": "chamfer",
+      "name": "Fase1",
+      "distance": 0.8,
+      "all": false,
+      "edges": [
+       {
+        "t": "CIRCLE",
+        "p": [
+         4,
+         0,
+         27
+        ]
+       }
+      ]
+     }
+    ],
+    "bodies": {
+     "e1": {
+      "name": "Bolzen",
+      "hidden": false,
+      "material": "stainless",
+      "color": ""
+     }
+    },
+    "components": [],
+    "inserts": []
+   }
+  },
+  {
+   "id": "5dvzkimfr3",
+   "name": "Bolzen M8x22 (3)",
+   "file": "Beispiele/Bolzen M8x22.cantcodecad",
+   "at": [
+    154,
+    0,
+    0
+   ],
+   "rot": null,
+   "part": {
+    "format": 2,
+    "app": "cantcodecad",
+    "name": "Bolzen M8x22",
+    "units": "mm",
+    "features": [
+     {
+      "id": "s1",
+      "type": "sketch",
+      "name": "Kopf",
+      "plane": {
+       "key": "XY",
+       "label": "XY · Draufsicht",
+       "o": [
+        0,
+        0,
+        0
+       ],
+       "x": [
+        1,
+        0,
+        0
+       ],
+       "y": [
+        0,
+        1,
+        0
+       ],
+       "n": [
+        0,
+        0,
+        1
+       ]
+      },
+      "points": [
+       {
+        "id": "c",
+        "x": 0,
+        "y": 0
+       }
+      ],
+      "curves": [
+       {
+        "id": "k",
+        "type": "circle",
+        "c": "c",
+        "r": 6.5
+       }
+      ],
+      "rules": []
+     },
+     {
+      "id": "e1",
+      "type": "extrude",
+      "name": "Kopf",
+      "sketch": "s1",
+      "distance": 5,
+      "direction": "normal",
+      "op": "new",
+      "profiles": null
+     },
+     {
+      "id": "s2",
+      "type": "sketch",
+      "name": "Schaft",
+      "plane": {
+       "key": "FACE",
+       "label": "Fläche des Körpers",
+       "o": [
+        0,
+        0,
+        5
+       ],
+       "x": [
+        1,
+        0,
+        0
+       ],
+       "y": [
+        0,
+        1,
+        0
+       ],
+       "n": [
+        0,
+        0,
+        1
+       ]
+      },
+      "points": [
+       {
+        "id": "c",
+        "x": 0,
+        "y": 0
+       }
+      ],
+      "curves": [
+       {
+        "id": "k",
+        "type": "circle",
+        "c": "c",
+        "r": 4
+       }
+      ],
+      "rules": []
+     },
+     {
+      "id": "e2",
+      "type": "extrude",
+      "name": "Schaft",
+      "sketch": "s2",
+      "distance": 22,
+      "direction": "normal",
+      "op": "join",
+      "profiles": null
+     },
+     {
+      "id": "c1",
+      "type": "chamfer",
+      "name": "Fase1",
+      "distance": 0.8,
+      "all": false,
+      "edges": [
+       {
+        "t": "CIRCLE",
+        "p": [
+         4,
+         0,
+         27
+        ]
+       }
+      ]
+     }
+    ],
+    "bodies": {
+     "e1": {
+      "name": "Bolzen",
+      "hidden": false,
+      "material": "stainless",
+      "color": ""
+     }
+    },
+    "components": [],
+    "inserts": []
+   }
+  },
+  {
+   "id": "blbq1sgi5c",
+   "name": "Bolzen M8x22 (4)",
+   "file": "Beispiele/Bolzen M8x22.cantcodecad",
+   "at": [
+    181,
+    0,
+    0
+   ],
+   "rot": null,
+   "part": {
+    "format": 2,
+    "app": "cantcodecad",
+    "name": "Bolzen M8x22",
+    "units": "mm",
+    "features": [
+     {
+      "id": "s1",
+      "type": "sketch",
+      "name": "Kopf",
+      "plane": {
+       "key": "XY",
+       "label": "XY · Draufsicht",
+       "o": [
+        0,
+        0,
+        0
+       ],
+       "x": [
+        1,
+        0,
+        0
+       ],
+       "y": [
+        0,
+        1,
+        0
+       ],
+       "n": [
+        0,
+        0,
+        1
+       ]
+      },
+      "points": [
+       {
+        "id": "c",
+        "x": 0,
+        "y": 0
+       }
+      ],
+      "curves": [
+       {
+        "id": "k",
+        "type": "circle",
+        "c": "c",
+        "r": 6.5
+       }
+      ],
+      "rules": []
+     },
+     {
+      "id": "e1",
+      "type": "extrude",
+      "name": "Kopf",
+      "sketch": "s1",
+      "distance": 5,
+      "direction": "normal",
+      "op": "new",
+      "profiles": null
+     },
+     {
+      "id": "s2",
+      "type": "sketch",
+      "name": "Schaft",
+      "plane": {
+       "key": "FACE",
+       "label": "Fläche des Körpers",
+       "o": [
+        0,
+        0,
+        5
+       ],
+       "x": [
+        1,
+        0,
+        0
+       ],
+       "y": [
+        0,
+        1,
+        0
+       ],
+       "n": [
+        0,
+        0,
+        1
+       ]
+      },
+      "points": [
+       {
+        "id": "c",
+        "x": 0,
+        "y": 0
+       }
+      ],
+      "curves": [
+       {
+        "id": "k",
+        "type": "circle",
+        "c": "c",
+        "r": 4
+       }
+      ],
+      "rules": []
+     },
+     {
+      "id": "e2",
+      "type": "extrude",
+      "name": "Schaft",
+      "sketch": "s2",
+      "distance": 22,
+      "direction": "normal",
+      "op": "join",
+      "profiles": null
+     },
+     {
+      "id": "c1",
+      "type": "chamfer",
+      "name": "Fase1",
+      "distance": 0.8,
+      "all": false,
+      "edges": [
+       {
+        "t": "CIRCLE",
+        "p": [
+         4,
+         0,
+         27
+        ]
+       }
+      ]
+     }
+    ],
+    "bodies": {
+     "e1": {
+      "name": "Bolzen",
+      "hidden": false,
+      "material": "stainless",
+      "color": ""
+     }
+    },
+    "components": [],
+    "inserts": []
+   }
+  }
+ ],
+ "file": "Beispiele/Beispiel-Baugruppe.cantcodecad"
+}

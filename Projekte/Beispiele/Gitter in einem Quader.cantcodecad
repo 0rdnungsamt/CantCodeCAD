@@ -1,0 +1,13 @@
+{
+  "format": 2,
+  "app": "cantcodecad",
+  "name": "Gitter in einem Quader",
+  "units": "mm",
+  "features": [
+    { "id": "q1", "type": "primitive", "name": "Quader1", "kind": "box", "plane": { "kind": "origin", "key": "XY" }, "cx": 0, "cy": 0, "w": 20, "l": 20, "h": 20, "d": 20, "d2": 6, "flip": false, "op": "new" },
+    { "id": "g1", "type": "gitter", "name": "Gitter1", "bodies": ["q1"], "typ": "gyroid", "zelle": 10, "dicke": 3, "auflsung": 0, "op": "new" }
+  ],
+  "bodies": {},
+  "components": [],
+  "inserts": []
+}

@@ -1,0 +1,233 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Doppelsaum mit Durchbruch",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Zuschnitt",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "b",
+     "x": 120,
+     "y": 0
+    },
+    {
+     "id": "c",
+     "x": 120,
+     "y": 80
+    },
+    {
+     "id": "d",
+     "x": 0,
+     "y": 80
+    },
+    {
+     "id": "h1",
+     "x": 60,
+     "y": 40
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    },
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "h1",
+     "r": 3.3
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "b1",
+   "type": "sm_base",
+   "name": "Blech",
+   "sketch": "s1",
+   "profiles": null,
+   "flip": false,
+   "op": "new"
+  },
+  {
+   "id": "f1",
+   "type": "sm_flange",
+   "name": "Doppelsaum",
+   "edges": [
+    {
+     "ref": {
+      "t": "LINE",
+      "p": [
+       120,
+       40,
+       2
+      ],
+      "d": [
+       0,
+       1,
+       0
+      ]
+     },
+     "body": "b1"
+    }
+   ],
+   "height": 12,
+   "angle": 180,
+   "flip": false,
+   "hemGap": 2,
+   "hemKind": "double",
+   "hemSetback": 2
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Durchbruch 4 × 10",
+   "plane": {
+    "key": "FACE",
+    "label": "Fläche des Körpers",
+    "o": [
+     0,
+     0,
+     10
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 110,
+     "y": 30
+    },
+    {
+     "id": "b",
+     "x": 114,
+     "y": 30
+    },
+    {
+     "id": "c",
+     "x": 114,
+     "y": 40
+    },
+    {
+     "id": "d",
+     "x": 110,
+     "y": 40
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Durchbruch",
+   "sketch": "s2",
+   "profiles": null,
+   "distance": 10,
+   "direction": "reverse",
+   "extent": "all",
+   "op": "cut"
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": [],
+ "params": [],
+ "sheet": {
+  "t": 2,
+  "r": 2,
+  "k": 0.44
+ }
+}

@@ -1,0 +1,108 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Prägen auf Zylinder",
+ "units": "mm",
+ "features": [
+  {
+   "id": "c1",
+   "type": "primitive",
+   "name": "Zylinder1",
+   "kind": "cylinder",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 0,
+   "cy": 0,
+   "w": 20,
+   "l": 20,
+   "h": 30,
+   "d": 40,
+   "d2": 6,
+   "flip": false,
+   "op": "new"
+  },
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Schild",
+   "plane": {
+    "key": "XZ",
+    "label": "XZ · Vorderansicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": -5,
+     "y": 10
+    },
+    {
+     "id": "b",
+     "x": 5,
+     "y": 10
+    },
+    {
+     "id": "c",
+     "x": 5,
+     "y": 18
+    },
+    {
+     "id": "d",
+     "x": -5,
+     "y": 18
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

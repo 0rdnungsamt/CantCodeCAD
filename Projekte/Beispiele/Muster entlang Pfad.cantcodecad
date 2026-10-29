@@ -1,0 +1,212 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Muster entlang Pfad",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Skizze1",
+   "plane": {
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "c",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "q1",
+     "x": -3,
+     "y": -1
+    },
+    {
+     "id": "q2",
+     "x": 3,
+     "y": -1
+    },
+    {
+     "id": "q3",
+     "x": 3,
+     "y": 1
+    },
+    {
+     "id": "q4",
+     "x": -3,
+     "y": 1
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "q1",
+     "p2": "q2"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "q2",
+     "p2": "q3"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "q3",
+     "p2": "q4"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "q4",
+     "p2": "q1"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Pfad",
+   "plane": {
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "b",
+     "x": 50,
+     "y": 0
+    },
+    {
+     "id": "m",
+     "x": 50,
+     "y": 30
+    },
+    {
+     "id": "e",
+     "x": 80,
+     "y": 30
+    }
+   ],
+   "curves": [
+    {
+     "id": "p1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "p2",
+     "type": "arc",
+     "c": "m",
+     "s": "b",
+     "e": "e",
+     "r": 30,
+     "a0": -1.5707963267948966,
+     "a1": 0
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Ext",
+   "sketch": "s1",
+   "distance": 5,
+   "direction": "normal",
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "pt",
+   "type": "pattern",
+   "name": "Muster entlang Pfad",
+   "features": [
+    "e1"
+   ],
+   "kind": "path",
+   "path": "s2",
+   "count": 6,
+   "dist": "extent",
+   "orient": "path",
+   "flip": false,
+   "axis": "Z",
+   "spacing": 20,
+   "angle": 360
+  },
+  {
+   "id": "c1",
+   "type": "coil",
+   "name": "Feder",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 0,
+   "cy": -40,
+   "diameter": 16,
+   "pos": "center",
+   "mode": "pitch",
+   "pitch": 4,
+   "height": 40,
+   "turns": 6,
+   "section": "circle",
+   "size": 1.6,
+   "left": false,
+   "flat": true,
+   "flip": false,
+   "angle": 0,
+   "op": "new"
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": [],
+ "params": []
+}

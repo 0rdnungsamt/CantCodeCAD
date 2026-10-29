@@ -1,0 +1,123 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Dünn extrudierte Hohlprofile",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Rahmen",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [0, 0, 0],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "a", "x": -20, "y": -15 },
+    { "id": "b", "x": 20, "y": -15 },
+    { "id": "c", "x": 20, "y": 15 },
+    { "id": "d", "x": -20, "y": 15 }
+   ],
+   "curves": [
+    { "id": "l1", "type": "line", "p1": "a", "p2": "b" },
+    { "id": "l2", "type": "line", "p1": "b", "p2": "c" },
+    { "id": "l3", "type": "line", "p1": "c", "p2": "d" },
+    { "id": "l4", "type": "line", "p1": "d", "p2": "a" }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Rahmenwand",
+   "sketch": "s1",
+   "distance": 12,
+   "direction": "normal",
+   "thin": true,
+   "thickness": 3,
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Rohr",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [0, 0, 0],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "c", "x": 60, "y": 0 }
+   ],
+   "curves": [
+    { "id": "k", "type": "circle", "c": "c", "r": 10 }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e2",
+   "type": "extrude",
+   "name": "Rohrwand",
+   "sketch": "s2",
+   "distance": 10,
+   "direction": "normal",
+   "thin": true,
+   "wall": "middle",
+   "thickness": 2,
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "s3",
+   "type": "sketch",
+   "name": "Platte mit Loch",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [0, 0, 0],
+    "x": [1, 0, 0],
+    "y": [0, 1, 0],
+    "n": [0, 0, 1]
+   },
+   "points": [
+    { "id": "a", "x": -15, "y": 45 },
+    { "id": "b", "x": 15, "y": 45 },
+    { "id": "c", "x": 15, "y": 75 },
+    { "id": "d", "x": -15, "y": 75 },
+    { "id": "m", "x": 0, "y": 60 }
+   ],
+   "curves": [
+    { "id": "l1", "type": "line", "p1": "a", "p2": "b" },
+    { "id": "l2", "type": "line", "p1": "b", "p2": "c" },
+    { "id": "l3", "type": "line", "p1": "c", "p2": "d" },
+    { "id": "l4", "type": "line", "p1": "d", "p2": "a" },
+    { "id": "k", "type": "circle", "c": "m", "r": 5 }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e3",
+   "type": "extrude",
+   "name": "Stegwand",
+   "sketch": "s3",
+   "distance": 8,
+   "direction": "normal",
+   "thin": true,
+   "wall": "side2",
+   "thickness": 2,
+   "op": "new",
+   "profiles": null
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

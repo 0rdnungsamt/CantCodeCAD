@@ -1,0 +1,195 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Fräser entlang Pfad",
+ "units": "mm",
+ "features": [
+  {
+   "id": "k1",
+   "type": "primitive",
+   "name": "Kugelfräser",
+   "kind": "sphere",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 0,
+   "cy": 0,
+   "w": 10,
+   "l": 10,
+   "h": 10,
+   "d": 10,
+   "d2": 4,
+   "flip": false,
+   "op": "new"
+  },
+  {
+   "id": "z1",
+   "type": "primitive",
+   "name": "Schaftfräser",
+   "kind": "cylinder",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 0,
+   "cy": 100,
+   "w": 10,
+   "l": 10,
+   "h": 10,
+   "d": 10,
+   "d2": 4,
+   "flip": false,
+   "op": "new"
+  },
+  {
+   "id": "p1",
+   "type": "sketch",
+   "name": "Bahn Kugel",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "b",
+     "x": 50,
+     "y": 0
+    },
+    {
+     "id": "c",
+     "x": 50,
+     "y": 30
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "p2",
+   "type": "sketch",
+   "name": "Bahn Zylinder",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 0,
+     "y": 100
+    },
+    {
+     "id": "b",
+     "x": 50,
+     "y": 100
+    },
+    {
+     "id": "c",
+     "x": 50,
+     "y": 130
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "w1",
+   "type": "sweep",
+   "name": "Kugelbahn",
+   "src": "body",
+   "toolBody": "k1",
+   "path": "p1",
+   "sketch": null,
+   "corners": "right",
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "w2",
+   "type": "sweep",
+   "name": "Zylinderbahn",
+   "src": "body",
+   "toolBody": "z1",
+   "path": "p2",
+   "sketch": null,
+   "corners": "right",
+   "op": "new",
+   "profiles": null
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

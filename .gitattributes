@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+vendor/** -text
+licenses/** -text
+tests/fixtures/*.stp -text
+tests/fixtures/*.step -text

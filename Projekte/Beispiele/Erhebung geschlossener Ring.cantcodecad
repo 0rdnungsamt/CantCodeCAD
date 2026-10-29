@@ -1,0 +1,413 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Erhebung geschlossener Ring",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Ringprofil 0°",
+   "plane": {
+    "key": "FACE",
+    "label": "Ringebene 0°",
+    "o": [
+     50,
+     0,
+     0
+    ],
+    "x": [
+     0,
+     0,
+     1
+    ],
+    "y": [
+     1,
+     0,
+     0
+    ],
+    "n": [
+     0,
+     1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 10
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Ringprofil 45°",
+   "plane": {
+    "key": "FACE",
+    "label": "Ringebene 45°",
+    "o": [
+     35.355339059327,
+     35.355339059327,
+     0
+    ],
+    "x": [
+     0,
+     0,
+     1
+    ],
+    "y": [
+     0.707106781187,
+     0.707106781187,
+     0
+    ],
+    "n": [
+     -0.707106781187,
+     0.707106781187,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 10
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s3",
+   "type": "sketch",
+   "name": "Ringprofil 90°",
+   "plane": {
+    "key": "FACE",
+    "label": "Ringebene 90°",
+    "o": [
+     0,
+     50,
+     0
+    ],
+    "x": [
+     0,
+     0,
+     1
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     -1,
+     0,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 10
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s4",
+   "type": "sketch",
+   "name": "Ringprofil 135°",
+   "plane": {
+    "key": "FACE",
+    "label": "Ringebene 135°",
+    "o": [
+     -35.355339059327,
+     35.355339059327,
+     0
+    ],
+    "x": [
+     0,
+     0,
+     1
+    ],
+    "y": [
+     -0.707106781187,
+     0.707106781187,
+     0
+    ],
+    "n": [
+     -0.707106781187,
+     -0.707106781187,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 10
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s5",
+   "type": "sketch",
+   "name": "Ringprofil 180°",
+   "plane": {
+    "key": "FACE",
+    "label": "Ringebene 180°",
+    "o": [
+     -50,
+     0,
+     0
+    ],
+    "x": [
+     0,
+     0,
+     1
+    ],
+    "y": [
+     -1,
+     0,
+     0
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 10
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s6",
+   "type": "sketch",
+   "name": "Ringprofil 225°",
+   "plane": {
+    "key": "FACE",
+    "label": "Ringebene 225°",
+    "o": [
+     -35.355339059327,
+     -35.355339059327,
+     0
+    ],
+    "x": [
+     0,
+     0,
+     1
+    ],
+    "y": [
+     -0.707106781187,
+     -0.707106781187,
+     0
+    ],
+    "n": [
+     0.707106781187,
+     -0.707106781187,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 10
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s7",
+   "type": "sketch",
+   "name": "Ringprofil 270°",
+   "plane": {
+    "key": "FACE",
+    "label": "Ringebene 270°",
+    "o": [
+     0,
+     -50,
+     0
+    ],
+    "x": [
+     0,
+     0,
+     1
+    ],
+    "y": [
+     0,
+     -1,
+     0
+    ],
+    "n": [
+     1,
+     0,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 10
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s8",
+   "type": "sketch",
+   "name": "Ringprofil 315°",
+   "plane": {
+    "key": "FACE",
+    "label": "Ringebene 315°",
+    "o": [
+     35.355339059327,
+     -35.355339059327,
+     0
+    ],
+    "x": [
+     0,
+     0,
+     1
+    ],
+    "y": [
+     0.707106781187,
+     -0.707106781187,
+     0
+    ],
+    "n": [
+     0.707106781187,
+     0.707106781187,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "circle",
+     "c": "m",
+     "r": 10
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "loft",
+   "name": "Ring",
+   "sections": [
+    {
+     "sketch": "s1",
+     "profile": null
+    },
+    {
+     "sketch": "s2",
+     "profile": null
+    },
+    {
+     "sketch": "s3",
+     "profile": null
+    },
+    {
+     "sketch": "s4",
+     "profile": null
+    },
+    {
+     "sketch": "s5",
+     "profile": null
+    },
+    {
+     "sketch": "s6",
+     "profile": null
+    },
+    {
+     "sketch": "s7",
+     "profile": null
+    },
+    {
+     "sketch": "s8",
+     "profile": null
+    }
+   ],
+   "ruled": false,
+   "closed": true,
+   "op": "new"
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

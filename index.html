@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cantcodecad</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f2933'/%3E%3Cpath d='M9 21l7 4 7-4V11l-7-4-7 4z' fill='none' stroke='%23fff' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M9 11l7 4 7-4M16 15v10' fill='none' stroke='%235b8def' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/gfonts/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="src/styles.css">
+<script>/* Farbschema vor dem ersten Zeichnen (Einstellungen → Darstellung, src/prefs-ui.js) */
+try { const k = new URLSearchParams(location.search).has('test') ? 'cc.prefs.test' : 'cc.prefs', p = JSON.parse(localStorage.getItem(k) || '{}');
+  document.documentElement.dataset.theme = p.theme === 'dark' || (p.theme === 'system' && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; } catch (_) { /* hell */ }</script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "/cdn/npm/three@0.185.1/build/three.module.js",
+    "three/addons/": "/cdn/npm/three@0.185.1/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body data-mode="model">
+<div id="app">
+  <header class="titlebar">
+    <div class="brand"><span class="logo" aria-hidden="true"></span><b>cantcodecad</b></div>
+    <div class="menu" id="menu"></div>
+    <input class="docname" id="docname" value="Teil1" aria-label="Name des Teils" spellcheck="false">
+    <div class="kstate" id="kstate" data-state="load">Geometriekern lädt …</div>
+    <button type="button" class="iconbtn prefsbtn" id="prefsbtn" data-cmd="prefs" title="Einstellungen (Farbschema, Größe der Oberfläche)" aria-label="Einstellungen"></button>
+  </header>
+
+  <nav class="ribbon" id="ribbon" aria-label="Werkzeuge"></nav>
+  <nav class="ribbon sketchbar" id="sketchbar" aria-label="Skizzenwerkzeuge" hidden></nav>
+
+  <aside class="browser" id="browser" aria-label="Browser"></aside>
+
+  <main class="viewport" id="viewport">
+    <canvas id="cv"></canvas>
+    <div class="overlay" id="overlay"></div>
+    <canvas id="viewcube" width="110" height="110" aria-label="Ansichtswürfel"></canvas>
+    <button type="button" class="cubehome" data-cmd="home" title="Startansicht" aria-label="Startansicht"></button>
+    <div class="navbar" id="navbar" aria-label="Navigation"></div>
+    <section class="dialog" id="dialog" hidden></section>
+    <div class="hint" id="hint"></div>
+    <div class="toast" id="toast" role="status" hidden></div>
+    <div class="busy" id="busy" hidden><span></span>rechnet</div>
+  </main>
+
+  <footer class="timeline">
+    <div class="tl-ctl" id="timeline-ctl"></div>
+    <div class="tl-items" id="timeline-items"></div>
+  </footer>
+  <div class="statusbar"><span id="status-left">Bereit</span><span class="status-right">Einheiten mm · Z zeigt nach oben</span></div>
+</div>
+<input type="file" id="fileopen" accept=".cantcodecad,.json" hidden>
+<input type="file" id="fileimport" accept=".step,.stp,.stl,.dxf,.svg" hidden>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

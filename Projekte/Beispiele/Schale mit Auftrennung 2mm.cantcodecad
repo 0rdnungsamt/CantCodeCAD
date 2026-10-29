@@ -1,0 +1,224 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Schale mit Auftrennung",
+ "units": "mm",
+ "sheet": {
+  "t": 2,
+  "r": 2,
+  "k": 0.44
+ },
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Umriss",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": 0,
+     "y": 0
+    },
+    {
+     "id": "b",
+     "x": 100,
+     "y": 0
+    },
+    {
+     "id": "c",
+     "x": 100,
+     "y": 60
+    },
+    {
+     "id": "d",
+     "x": 0,
+     "y": 60
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "extrude",
+   "name": "Block",
+   "sketch": "s1",
+   "distance": 40,
+   "op": "new",
+   "profiles": null
+  },
+  {
+   "id": "sh1",
+   "type": "shell",
+   "name": "Schale",
+   "thickness": 2,
+   "faces": [
+    {
+     "t": "PLANE",
+     "n": [
+      0,
+      0,
+      1
+     ],
+     "dist": 40,
+     "p": [
+      50,
+      30,
+      40
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cv1",
+   "type": "sm_convert",
+   "name": "In Blech umwandeln",
+   "face": {
+    "t": "PLANE",
+    "n": [
+     0,
+     0,
+     -1
+    ],
+    "dist": 0,
+    "p": [
+     50,
+     30,
+     0
+    ]
+   },
+   "faceBody": null
+  },
+  {
+   "id": "rp1",
+   "type": "sm_rip",
+   "name": "Auftrennung",
+   "edges": [
+    {
+     "ref": {
+      "t": "LINE",
+      "p": [
+       0,
+       0,
+       20
+      ],
+      "d": [
+       0,
+       0,
+       1
+      ]
+     },
+     "body": "e1"
+    },
+    {
+     "ref": {
+      "t": "LINE",
+      "p": [
+       100,
+       0,
+       20
+      ],
+      "d": [
+       0,
+       0,
+       1
+      ]
+     },
+     "body": "e1"
+    },
+    {
+     "ref": {
+      "t": "LINE",
+      "p": [
+       100,
+       60,
+       20
+      ],
+      "d": [
+       0,
+       0,
+       1
+      ]
+     },
+     "body": "e1"
+    },
+    {
+     "ref": {
+      "t": "LINE",
+      "p": [
+       0,
+       60,
+       20
+      ],
+      "d": [
+       0,
+       0,
+       1
+      ]
+     },
+     "body": "e1"
+    }
+   ],
+   "kind": "butt",
+   "flip": false,
+   "gap": 0.5
+  }
+ ],
+ "bodies": {
+  "e1": {
+   "name": "Körper1",
+   "hidden": false
+  }
+ },
+ "components": [],
+ "inserts": []
+}

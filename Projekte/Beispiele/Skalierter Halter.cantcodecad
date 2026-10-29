@@ -1,0 +1,14 @@
+{
+  "format": 2,
+  "app": "cantcodecad",
+  "name": "Skalierter Halter",
+  "units": "mm",
+  "features": [
+    { "id": "q1", "type": "primitive", "name": "Quader1", "kind": "box", "plane": { "kind": "origin", "key": "XY" }, "cx": 0, "cy": 0, "w": 40, "l": 30, "h": 8, "d": 20, "d2": 6, "flip": false, "op": "new" },
+    { "id": "z1", "type": "primitive", "name": "Zylinder1", "kind": "cylinder", "plane": { "kind": "origin", "key": "XY" }, "cx": 0, "cy": 0, "w": 20, "l": 20, "h": 20, "d": 16, "d2": 6, "flip": false, "op": "join" },
+    { "id": "sc1", "type": "scale", "name": "Skalieren1", "comps": [], "bodies": ["q1"], "factor": 1.5, "point": "custom", "px": 0, "py": 0, "pz": 0 }
+  ],
+  "bodies": {},
+  "components": [],
+  "inserts": []
+}

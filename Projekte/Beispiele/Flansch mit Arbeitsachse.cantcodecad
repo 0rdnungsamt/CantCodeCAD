@@ -1,0 +1,18 @@
+{
+  "format": 2,
+  "app": "cantcodecad",
+  "name": "Flansch mit Arbeitsachse",
+  "units": "mm",
+  "features": [
+    { "id": "sc", "type": "primitive", "name": "Scheibe", "kind": "cylinder", "plane": { "kind": "origin", "key": "XY" }, "cx": 50, "cy": 0, "w": 20, "l": 20, "h": 10, "d": 80, "d2": 6, "flip": false, "op": "new" },
+    { "id": "wp1", "type": "plane", "name": "Arbeitsebene1", "base": { "kind": "origin", "key": "YZ" }, "offset": 50, "flip": false },
+    { "id": "ax1", "type": "axis", "name": "Arbeitsachse1", "mode": "planes", "base": { "kind": "planes", "a": { "kind": "plane", "id": "wp1" }, "b": { "kind": "origin", "key": "XZ" } } },
+    { "id": "lo", "type": "primitive", "name": "Loch", "kind": "cylinder", "plane": { "kind": "origin", "key": "XY" }, "cx": 80, "cy": 0, "w": 20, "l": 20, "h": 10, "d": 8, "d2": 6, "flip": false, "op": "cut" },
+    { "id": "lk", "type": "pattern", "name": "Lochkreis", "features": ["lo"], "kind": "circular", "axis": "Z", "count": 6, "spacing": 20, "angle": 360, "axisRef": { "o": [0, 0, 0], "d": [0, 0, 1], "label": "Arbeitsachse1", "id": "ax1" } },
+    { "id": "mi", "type": "plane", "name": "Mittelebene", "base": { "kind": "mid", "a": { "kind": "origin", "key": "XY" }, "b": { "kind": "face", "plane": { "key": "FACE", "label": "Fläche des Körpers", "o": [50, 0, 10], "x": [1, 0, 0], "y": [0, 1, 0], "n": [0, 0, 1] } } }, "offset": 0, "flip": false },
+    { "id": "tl", "type": "split", "name": "Teilen", "bodies": [], "plane": { "kind": "plane", "id": "mi" } }
+  ],
+  "bodies": {},
+  "components": [],
+  "inserts": []
+}

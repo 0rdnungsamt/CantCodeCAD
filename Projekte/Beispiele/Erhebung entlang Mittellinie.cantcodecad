@@ -1,0 +1,244 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Erhebung entlang Mittellinie",
+ "units": "mm",
+ "features": [
+  {
+   "id": "s1",
+   "type": "sketch",
+   "name": "Quadrat 10",
+   "plane": {
+    "key": "XY",
+    "label": "XY · Draufsicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     0,
+     0,
+     1
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": -5,
+     "y": -5
+    },
+    {
+     "id": "b",
+     "x": 5,
+     "y": -5
+    },
+    {
+     "id": "c",
+     "x": 5,
+     "y": 5
+    },
+    {
+     "id": "d",
+     "x": -5,
+     "y": 5
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s2",
+   "type": "sketch",
+   "name": "Quadrat 20",
+   "plane": {
+    "key": "FACE",
+    "label": "Ebene x = 50",
+    "o": [
+     50,
+     0,
+     50
+    ],
+    "x": [
+     0,
+     1,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     1,
+     0,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "a",
+     "x": -10,
+     "y": -10
+    },
+    {
+     "id": "b",
+     "x": 10,
+     "y": -10
+    },
+    {
+     "id": "c",
+     "x": 10,
+     "y": 10
+    },
+    {
+     "id": "d",
+     "x": -10,
+     "y": 10
+    }
+   ],
+   "curves": [
+    {
+     "id": "l1",
+     "type": "line",
+     "p1": "a",
+     "p2": "b"
+    },
+    {
+     "id": "l2",
+     "type": "line",
+     "p1": "b",
+     "p2": "c"
+    },
+    {
+     "id": "l3",
+     "type": "line",
+     "p1": "c",
+     "p2": "d"
+    },
+    {
+     "id": "l4",
+     "type": "line",
+     "p1": "d",
+     "p2": "a"
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "s3",
+   "type": "sketch",
+   "name": "Mittellinie",
+   "plane": {
+    "key": "XZ",
+    "label": "XZ · Vorderansicht",
+    "o": [
+     0,
+     0,
+     0
+    ],
+    "x": [
+     1,
+     0,
+     0
+    ],
+    "y": [
+     0,
+     0,
+     1
+    ],
+    "n": [
+     0,
+     -1,
+     0
+    ]
+   },
+   "points": [
+    {
+     "id": "m",
+     "x": 50,
+     "y": 0
+    },
+    {
+     "id": "a",
+     "x": 50,
+     "y": 50
+    },
+    {
+     "id": "b",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "curves": [
+    {
+     "id": "k1",
+     "type": "arc",
+     "c": "m",
+     "s": "a",
+     "e": "b",
+     "r": 50,
+     "a0": 1.5707963267948966,
+     "a1": 3.141592653589793
+    }
+   ],
+   "rules": []
+  },
+  {
+   "id": "e1",
+   "type": "loft",
+   "name": "Bogen-Übergang",
+   "sections": [
+    {
+     "sketch": "s1",
+     "profile": null
+    },
+    {
+     "sketch": "s2",
+     "profile": null
+    }
+   ],
+   "center": "s3",
+   "ruled": false,
+   "op": "new"
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

@@ -1,0 +1,22 @@
+[package]
+name = "cantcodecad"
+version = "0.1.1"
+description = "cantcodecad – lokales parametrisches CAD"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tiny_http = "0.12"
+serde_json = "1"
+tauri-plugin-single-instance = "2"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
+
+[profile.release]
+opt-level = 3
+strip = true

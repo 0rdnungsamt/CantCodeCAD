@@ -1,0 +1,87 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Zwei Bleche durch Biegung verbunden",
+ "units": "mm",
+ "sheet": {
+  "t": 2,
+  "r": 2,
+  "k": 0.44
+ },
+ "features": [
+  {
+   "id": "pa",
+   "type": "primitive",
+   "kind": "box",
+   "name": "Blech liegend",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 50,
+   "cy": 30,
+   "w": 100,
+   "l": 60,
+   "h": 2,
+   "op": "new"
+  },
+  {
+   "id": "pb",
+   "type": "primitive",
+   "kind": "box",
+   "name": "Blech stehend",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 111,
+   "cy": 30,
+   "w": 2,
+   "l": 60,
+   "h": 50,
+   "op": "new"
+  },
+  {
+   "id": "j1",
+   "type": "sm_join",
+   "name": "Durch Biegung verbinden",
+   "edges": [
+    {
+     "ref": {
+      "t": "LINE",
+      "p": [
+       100,
+       30,
+       2
+      ],
+      "d": [
+       0,
+       1,
+       0
+      ]
+     },
+     "body": "pa"
+    },
+    {
+     "ref": {
+      "t": "LINE",
+      "p": [
+       110,
+       30,
+       0
+      ],
+      "d": [
+       0,
+       1,
+       0
+      ]
+     },
+     "body": "pb"
+    }
+   ]
+  }
+ ],
+ "bodies": {},
+ "components": [],
+ "inserts": []
+}

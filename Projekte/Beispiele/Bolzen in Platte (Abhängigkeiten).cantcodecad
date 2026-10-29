@@ -1,0 +1,217 @@
+{
+ "format": 2,
+ "app": "cantcodecad",
+ "name": "Bolzen in Platte (Abhängigkeiten)",
+ "units": "mm",
+ "kind": "assembly",
+ "bodies": {
+  "g1": {
+   "name": "Platte"
+  },
+  "z1": {
+   "name": "Bolzen"
+  }
+ },
+ "components": [
+  {
+   "id": "cg",
+   "name": "Grundplatte",
+   "bodies": [
+    "g1"
+   ],
+   "parent": null
+  },
+  {
+   "id": "cb",
+   "name": "Bolzen",
+   "bodies": [
+    "z1"
+   ],
+   "parent": null
+  }
+ ],
+ "features": [
+  {
+   "id": "g1",
+   "type": "primitive",
+   "name": "Platte",
+   "kind": "box",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 0,
+   "cy": 0,
+   "w": 60,
+   "l": 40,
+   "h": 10,
+   "d": 10,
+   "d2": 4,
+   "flip": false,
+   "op": "new",
+   "owner": "cg"
+  },
+  {
+   "id": "g2",
+   "type": "primitive",
+   "name": "Loch",
+   "kind": "cylinder",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 0,
+   "cy": 0,
+   "w": 10,
+   "l": 10,
+   "h": 10,
+   "d": 10,
+   "d2": 4,
+   "flip": false,
+   "op": "cut",
+   "owner": "cg"
+  },
+  {
+   "id": "z1",
+   "type": "primitive",
+   "name": "Schaft",
+   "kind": "cylinder",
+   "plane": {
+    "kind": "origin",
+    "key": "XY"
+   },
+   "cx": 100,
+   "cy": 50,
+   "w": 10,
+   "l": 10,
+   "h": 30,
+   "d": 10,
+   "d2": 4,
+   "flip": false,
+   "op": "new",
+   "owner": "cb"
+  },
+  {
+   "id": "z2",
+   "type": "primitive",
+   "name": "Bund",
+   "kind": "cylinder",
+   "plane": {
+    "kind": "face",
+    "plane": {
+     "key": "FACE",
+     "label": "z 30",
+     "o": [
+      0,
+      0,
+      30
+     ],
+     "x": [
+      1,
+      0,
+      0
+     ],
+     "y": [
+      0,
+      1,
+      0
+     ],
+     "n": [
+      0,
+      0,
+      1
+     ]
+    }
+   },
+   "cx": 100,
+   "cy": 50,
+   "w": 10,
+   "l": 10,
+   "h": 3,
+   "d": 20,
+   "d2": 4,
+   "flip": false,
+   "op": "join",
+   "owner": "cb"
+  },
+  {
+   "id": "k1",
+   "type": "constraint",
+   "name": "Bolzen setzen",
+   "comp": "cb",
+   "items": [
+    {
+     "type": "concentric",
+     "a": {
+      "kind": "face",
+      "ref": {
+       "t": "CYLINDRE",
+       "p": [
+        100,
+        50,
+        15
+       ],
+       "r": 5
+      },
+      "body": "z1"
+     },
+     "b": {
+      "kind": "face",
+      "ref": {
+       "t": "CYLINDRE",
+       "p": [
+        0,
+        0,
+        5
+       ],
+       "r": 5
+      },
+      "body": "g1"
+     },
+     "value": 0
+    },
+    {
+     "type": "mate",
+     "a": {
+      "kind": "face",
+      "ref": {
+       "t": "PLANE",
+       "n": [
+        0,
+        0,
+        -1
+       ],
+       "dist": -30,
+       "p": [
+        100,
+        50,
+        30
+       ]
+      },
+      "body": "z1"
+     },
+     "b": {
+      "kind": "face",
+      "ref": {
+       "t": "PLANE",
+       "n": [
+        0,
+        0,
+        1
+       ],
+       "dist": 10,
+       "p": [
+        0,
+        0,
+        10
+       ]
+      },
+      "body": "g1"
+     },
+     "value": 0
+    }
+   ]
+  }
+ ],
+ "inserts": []
+}
